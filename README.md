@@ -1,2 +1,4 @@
-Repozytorium zawierające projekty i zadania z Uniwersytetu Morskiego
-"# UMG" 
+# UMG
+'''
+    Witam cię serdecznie
+'''

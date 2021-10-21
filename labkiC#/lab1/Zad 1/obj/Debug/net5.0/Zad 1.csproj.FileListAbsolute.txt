@@ -1,0 +1,16 @@
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab1\Zad 1\bin\Debug\net5.0\Zad 1.exe
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab1\Zad 1\bin\Debug\net5.0\Zad 1.deps.json
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab1\Zad 1\bin\Debug\net5.0\Zad 1.runtimeconfig.json
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab1\Zad 1\bin\Debug\net5.0\Zad 1.runtimeconfig.dev.json
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab1\Zad 1\bin\Debug\net5.0\Zad 1.dll
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab1\Zad 1\bin\Debug\net5.0\ref\Zad 1.dll
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab1\Zad 1\bin\Debug\net5.0\Zad 1.pdb
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab1\Zad 1\obj\Debug\net5.0\Zad 1.csproj.AssemblyReference.cache
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab1\Zad 1\obj\Debug\net5.0\Zad 1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab1\Zad 1\obj\Debug\net5.0\Zad 1.AssemblyInfoInputs.cache
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab1\Zad 1\obj\Debug\net5.0\Zad 1.AssemblyInfo.cs
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab1\Zad 1\obj\Debug\net5.0\Zad 1.csproj.CoreCompileInputs.cache
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab1\Zad 1\obj\Debug\net5.0\Zad 1.dll
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab1\Zad 1\obj\Debug\net5.0\ref\Zad 1.dll
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab1\Zad 1\obj\Debug\net5.0\Zad 1.pdb
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab1\Zad 1\obj\Debug\net5.0\Zad 1.genruntimeconfig.cache

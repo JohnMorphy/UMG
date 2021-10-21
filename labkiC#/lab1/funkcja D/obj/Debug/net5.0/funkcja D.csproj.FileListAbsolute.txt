@@ -1,0 +1,16 @@
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab1\funkcja D\obj\Debug\net5.0\funkcja D.csproj.AssemblyReference.cache
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab1\funkcja D\obj\Debug\net5.0\funkcja D.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab1\funkcja D\obj\Debug\net5.0\funkcja D.AssemblyInfoInputs.cache
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab1\funkcja D\obj\Debug\net5.0\funkcja D.AssemblyInfo.cs
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab1\funkcja D\obj\Debug\net5.0\funkcja D.csproj.CoreCompileInputs.cache
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab1\funkcja D\bin\Debug\net5.0\funkcja D.exe
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab1\funkcja D\bin\Debug\net5.0\funkcja D.deps.json
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab1\funkcja D\bin\Debug\net5.0\funkcja D.runtimeconfig.json
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab1\funkcja D\bin\Debug\net5.0\funkcja D.runtimeconfig.dev.json
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab1\funkcja D\bin\Debug\net5.0\funkcja D.dll
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab1\funkcja D\bin\Debug\net5.0\ref\funkcja D.dll
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab1\funkcja D\bin\Debug\net5.0\funkcja D.pdb
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab1\funkcja D\obj\Debug\net5.0\funkcja D.dll
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab1\funkcja D\obj\Debug\net5.0\ref\funkcja D.dll
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab1\funkcja D\obj\Debug\net5.0\funkcja D.pdb
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab1\funkcja D\obj\Debug\net5.0\funkcja D.genruntimeconfig.cache

@@ -1,0 +1,16 @@
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab2\LiczbyPierwsze\bin\Debug\net5.0\LiczbyPierwsze.exe
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab2\LiczbyPierwsze\bin\Debug\net5.0\LiczbyPierwsze.deps.json
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab2\LiczbyPierwsze\bin\Debug\net5.0\LiczbyPierwsze.runtimeconfig.json
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab2\LiczbyPierwsze\bin\Debug\net5.0\LiczbyPierwsze.runtimeconfig.dev.json
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab2\LiczbyPierwsze\bin\Debug\net5.0\LiczbyPierwsze.dll
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab2\LiczbyPierwsze\bin\Debug\net5.0\ref\LiczbyPierwsze.dll
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab2\LiczbyPierwsze\bin\Debug\net5.0\LiczbyPierwsze.pdb
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab2\LiczbyPierwsze\obj\Debug\net5.0\LiczbyPierwsze.csproj.AssemblyReference.cache
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab2\LiczbyPierwsze\obj\Debug\net5.0\LiczbyPierwsze.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab2\LiczbyPierwsze\obj\Debug\net5.0\LiczbyPierwsze.AssemblyInfoInputs.cache
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab2\LiczbyPierwsze\obj\Debug\net5.0\LiczbyPierwsze.AssemblyInfo.cs
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab2\LiczbyPierwsze\obj\Debug\net5.0\LiczbyPierwsze.csproj.CoreCompileInputs.cache
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab2\LiczbyPierwsze\obj\Debug\net5.0\LiczbyPierwsze.dll
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab2\LiczbyPierwsze\obj\Debug\net5.0\ref\LiczbyPierwsze.dll
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab2\LiczbyPierwsze\obj\Debug\net5.0\LiczbyPierwsze.pdb
+C:\Users\ThinkPad\Desktop\repo\UM\labkiC#\lab2\LiczbyPierwsze\obj\Debug\net5.0\LiczbyPierwsze.genruntimeconfig.cache

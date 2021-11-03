@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "15HGTgzCzfwgLengO0hRdzWM4lP5MrAkLF2USC8z6BFZGuNyjzZV+m6ZaLZzji+hf5DNwWwTobY70z49ckiYEA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ThinkPad\\Desktop\\lakiernia\\lakiernia\\DB_test.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\stub.system.data.sqlite.core.netstandard\\1.0.115\\stub.system.data.sqlite.core.netstandard.1.0.115.nupkg.sha512",
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\system.data.sqlite.core\\1.0.115\\system.data.sqlite.core.1.0.115.nupkg.sha512"
+  ],
+  "logs": []
+}

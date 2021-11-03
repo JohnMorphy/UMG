@@ -1,4 +1,0 @@
-# UMG
-'''
-    Witam cię serdecznie
-'''

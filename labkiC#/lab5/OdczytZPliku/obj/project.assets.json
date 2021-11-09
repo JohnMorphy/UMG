@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Student\\.nuget\\packages\\": {}
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Student\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Visual Studio Code\\repoJank\\lab5\\lab5.csproj",
+      "projectUniqueName": "C:\\Users\\ThinkPad\\Desktop\\UniwersytetZajęcia\\UMG\\labkiC#\\lab5\\OdczytZPliku\\lab5.csproj",
       "projectName": "lab5",
-      "projectPath": "C:\\Users\\Student\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Visual Studio Code\\repoJank\\lab5\\lab5.csproj",
-      "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Student\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Visual Studio Code\\repoJank\\lab5\\obj\\",
+      "projectPath": "C:\\Users\\ThinkPad\\Desktop\\UniwersytetZajęcia\\UMG\\labkiC#\\lab5\\OdczytZPliku\\lab5.csproj",
+      "packagesPath": "C:\\Users\\ThinkPad\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ThinkPad\\Desktop\\UniwersytetZajęcia\\UMG\\labkiC#\\lab5\\OdczytZPliku\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Student\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\ThinkPad\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"

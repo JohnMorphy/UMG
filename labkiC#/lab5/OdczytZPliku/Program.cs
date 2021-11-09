@@ -11,6 +11,8 @@ namespace lab5
 
             double[] I = new double[lines.Length];
             double[] V = new double[lines.Length];
+            double[] P = new double[lines.Length];
+            double[] calka = new double[lines.Length];
             string[] temp = new string[2];
 
             for(int i = 1; i < lines.Length; i++)
@@ -18,12 +20,19 @@ namespace lab5
             temp = lines[i].Split(",");
             I[i] = double.Parse(temp[0].Replace(".", ","));
             V[i] = double.Parse(temp[1].Replace(".", ","));
+            P[i] = Math.Round(I[i]*10*V[i],4);
             }
 
-            string output = "T[ms];I[A];U[V];P[W]" + "\r\n";
+            for(int i = 1; i < lines.Length-1; i++)
+            {
+                calka[i] = Math.Round((P[i]+P[i+1])/2,4);
+            }
+            
+
+            string output = "T[ms];I[A];U[V];P[W];całka" + "\r\n";
 
             for(int i = 1; i < lines.Length; i++)
-                output += i + ";" +  Math.Round(I[i]*10,4) + ";" + V[i] + ";" + Math.Round(I[i]*10*V[i],4) + "\r\n";
+                output += i + ";" +  Math.Round(I[i]*10,4) + ";" + V[i] + ";" + P[i] + ";" + calka[i] + "\r\n";
 
 
             File.WriteAllText("./output.csv", output);

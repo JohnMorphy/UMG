@@ -6,6 +6,7 @@ using MySql.Data.MySqlClient;
 
 
 // dotnet add package MySql.Data --version 8.0.27 //dodanie MySql
+// http://localhost/phpmyadmin/index.php?route=/&reload=1
 public class mySQL_wpr
 {
     static void AddUser(String username, String email, String password)
@@ -48,6 +49,31 @@ public class mySQL_wpr
       conn.Close();
       Console.WriteLine("Done.");
     }
+    static void ShowTable()
+            {
+                string connStr = "server=localhost;user=root;database=infa;port=3306;password=";
+                MySqlConnection conn = new MySqlConnection(connStr);
+                try
+                {
+                    conn.Open();                  
+                    string query = "SHOW TABLES FROM infa";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Console.WriteLine(reader.GetString(0));
+                        }
+                    }
+                    
+                }
+                catch (Exception exception)
+                {
+                    Console.WriteLine(exception.ToString());
+                }
+                conn.Close();
+                Console.ReadLine();
+            }
 
   public static void Main()
   {
@@ -56,14 +82,18 @@ public class mySQL_wpr
     string email = "br@gmail.com";
     string password = "mrocznaDzielnica";
     */
-    string choice="";
+    int choice=0;
     while(true)
     {
-      Console.WriteLine("Co chesz zrobić? \r\n[1] utwórz tabelę\r\n[2] dodaj użytkownika \r\n[dowolny znak] zakończ");
-      choice=Console.ReadLine();
+      Console.WriteLine("Co chesz zrobić? \r\n[1] utwórz tabelę\r\n[2] dodaj użytkownika \r\n[3] wyświelt tabelę \r\n[dowolny znak] zakończ");
+      int.TryParse(Console.ReadLine(), out choice);
       switch(choice)
       {
-        case "2":
+        case 3:
+            Console.Clear();
+            ShowTable();
+            break;
+        case 2:
             Console.WriteLine("Podaj username: ");
             string username = Console.ReadLine();
             Console.WriteLine("Podaj email: ");
@@ -72,11 +102,11 @@ public class mySQL_wpr
             string password = Console.ReadLine();
             AddUser(username, email, password);
             break;
-        case "1":
+        case 1:
             CreateDatabase();
             break;
       }
-      if(choice!="1" && choice!="2")
+      if(choice!=1 || choice!=2 || choice!=3)
       {
         break;
       }

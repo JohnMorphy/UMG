@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ThinkPad\\Desktop\\repo\\UM\\labkiC#\\lab1\\funkcja C\\funkcja C.csproj": {}
+    "C:\\Users\\ThinkPad\\Desktop\\UniwersytetZajęcia\\UMG\\labkiC#\\lab1\\funkcja C\\funkcja C.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ThinkPad\\Desktop\\repo\\UM\\labkiC#\\lab1\\funkcja C\\funkcja C.csproj": {
+    "C:\\Users\\ThinkPad\\Desktop\\UniwersytetZajęcia\\UMG\\labkiC#\\lab1\\funkcja C\\funkcja C.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ThinkPad\\Desktop\\repo\\UM\\labkiC#\\lab1\\funkcja C\\funkcja C.csproj",
+        "projectUniqueName": "C:\\Users\\ThinkPad\\Desktop\\UniwersytetZajęcia\\UMG\\labkiC#\\lab1\\funkcja C\\funkcja C.csproj",
         "projectName": "funkcja C",
-        "projectPath": "C:\\Users\\ThinkPad\\Desktop\\repo\\UM\\labkiC#\\lab1\\funkcja C\\funkcja C.csproj",
+        "projectPath": "C:\\Users\\ThinkPad\\Desktop\\UniwersytetZajęcia\\UMG\\labkiC#\\lab1\\funkcja C\\funkcja C.csproj",
         "packagesPath": "C:\\Users\\ThinkPad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ThinkPad\\Desktop\\repo\\UM\\labkiC#\\lab1\\funkcja C\\obj\\",
+        "outputPath": "C:\\Users\\ThinkPad\\Desktop\\UniwersytetZajęcia\\UMG\\labkiC#\\lab1\\funkcja C\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ThinkPad\\AppData\\Roaming\\NuGet\\NuGet.Config"

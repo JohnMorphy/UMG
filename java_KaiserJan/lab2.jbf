@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><JavaBlocks author="student" scriptEngine="JavaScript" version="6010">
+  <option fullConnectorValues="true" grid="false" pascal="false"/>
+  <flowchart name="operacjeBinarne">
+    <canvas interval="200" posX="0.0" posY="0.0" zoom="4"/>
+    <blocks>
+      <block id="1" name="Start" type="START">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="0.0" posY="-100.0"/>
+        <comment>operacjeBinarne</comment>
+        <connect ID="3"/>
+      </block>
+      <block id="2" type="RETURN">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="0.0" posY="100.0"/>
+        <comment>End</comment>
+      </block>
+      <block id="3" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="0.0"/>
+        <content>var suma=0&#13;;	for(var i =0; i&lt;10; i++)&#13;;	{&#13;;	    if((i&amp;1))&#13;;	        Writeln(i)    &#13;;	}</content>
+        <connect ID="2"/>
+      </block>
+    </blocks>
+  </flowchart>
+  <flowchart name="problem3.1">
+    <canvas interval="200" posX="-94.38077" posY="-16.0" zoom="1"/>
+    <blocks>
+      <block id="1" name="Start" type="START">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="0.0" posY="-100.0"/>
+        <comment>problem3.1</comment>
+        <connect ID="3"/>
+      </block>
+      <block id="2" type="RETURN">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="0.0" posY="100.0"/>
+        <comment>End</comment>
+      </block>
+      <block id="3" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="-10.0"/>
+        <content>var kolekcja = [4,1,55,123,-11,44]&#13;;	for(var i=0; i&lt;kolekcja.length; i++)&#13;;	{&#13;;	    Writeln("element " + i + " = " + kolekcja[i])&#13;;	}</content>
+        <connect ID="2"/>
+      </block>
+    </blocks>
+  </flowchart>
+  <flowchart name="problem3.2">
+    <canvas interval="200" posX="-843.0" posY="43.0" zoom="4"/>
+    <blocks>
+      <block id="1" name="Start" type="START">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="840.0" posY="-650.0"/>
+        <comment>problem3.2</comment>
+        <connect ID="3"/>
+      </block>
+      <block id="2" type="RETURN">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="840.0" posY="570.0"/>
+        <comment>End</comment>
+      </block>
+      <block id="3" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="840.0" posY="-30.0"/>
+        <content>var lista1 = [5, 5, 11]&#13;;	var lista2 = [5, 5, 11,false,"ada",67]&#13;;	var lista = [2,4,lista1,"ala",5,9.5,"ma","kota",2,true,true,lista2,false,false]&#13;;	var suma = 0&#13;;	var napis = ""&#13;;	var suma_bool = 0&#13;;	var suma_listy = 0&#13;;	&#13;;	&#13;;	function listaWLiście(number)&#13;;	{&#13;;	  for(var j=0; j&lt;lista[i].length; j++)&#13;;	        {   &#13;;	            if(typeof((lista[i])[j])=="number")&#13;;	            {&#13;;	                suma_listy+=(lista[i])[j]&#13;;	            }&#13;;	        } &#13;;	        Writeln("Mamy listę w liście i jest to " + i + " element listy")&#13;;	        Writeln("Suma elementów tej listy wynosi " + suma_listy)&#13;;	}&#13;;	&#13;;	&#13;;	for(var i=0; i&lt;lista.length; i++)&#13;;	{&#13;;	    if(typeof(lista[i])=="number")&#13;;	    {&#13;;	        suma+=lista[i]   &#13;;	    }&#13;;	    else if(typeof(lista[i])=="string")&#13;;	    {&#13;;	        napis+=lista[i]   &#13;;	    }&#13;;	    else if(typeof(lista[i])=="boolean")&#13;;	    {&#13;;	        suma_bool+=1&#13;;	    }&#13;;	    else if(typeof(lista[i])=="object")&#13;;	    {&#13;;	        listaWLiście(i)&#13;;	    }&#13;;	}&#13;;	&#13;;	Writeln("")&#13;;	Writeln("Suma liczb wynosi " + suma)&#13;;	Writeln("Po połączeniu wszystkich stringów powstaje napis: " + napis)&#13;;	Writeln("Na naszej liście występują " + suma_bool + " elementy boolowskie")</content>
+        <connect ID="2"/>
+      </block>
+    </blocks>
+  </flowchart>
+</JavaBlocks>

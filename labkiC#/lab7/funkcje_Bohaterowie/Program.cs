@@ -63,11 +63,14 @@ namespace funkcje
 
         public void SaveHero(List<Hero> heroes, int i)
         {
-            String toFile="Name: "+ heroes[i].GetName() + "Strength: " + heroes[i].GetStrength() + "Dexterity: " + heroes[i].GetDexterity();
-            toFile=toFile + "Intelligence: " + heroes[i].GetIntelligence() + "HP: " + heroes[i].GetHP();
-            File.WriteAllText("./" + heroes[i] + ".json", toFile); // Load    
+            Console.Clear();
+            String toFile="{\n\r\"Name\": "+ "\"" + heroes[i].GetName() + "\"," + "\n\r\"Strength\": " + "\"" + heroes[i].GetStrength() + "\"," + "\n\r\"Dexterity\": " + "\"" + heroes[i].GetDexterity() + "\",";
+            toFile=toFile + "\n\r\"Intelligence\": " + "\"" + heroes[i].GetIntelligence() + "\"," + "\n\r\"HP\": " + "\"" + heroes[i].GetHP() + "\",";
+            toFile=toFile + "\n\r\"Class\": " + "\"" + heroes[i].GetClass() + "\"," + "\n\r\"Level\": " + "\"" + heroes[i].GetLevel() + "\","  + "\n\r\"Experience\": " + "\"" + heroes[i].GetExperience() + "\"" + "\n\r}";
+            File.WriteAllText("./" + heroes[i].GetName() + ".json", toFile); // Load    
             Console.Clear();
         }
+
         public int load(string name)
         {
             try
@@ -91,7 +94,7 @@ namespace funkcje
     
     public class action
     {
-                public static void attack(List<Hero> heroes, int x, int y)
+        public static void attack(List<Hero> heroes, int x, int y)
         {
             heroes[x].HPreset();
             heroes[y].HPreset();
@@ -212,6 +215,8 @@ namespace funkcje
                         Console.WriteLine("Podaj klasę nowego bohatera (do wyboru warrior, assassin i sorcerer) ");
                         string heroClass = Console.ReadLine();
                         Hero heroNew = new Hero(heroName, heroClass);
+                        heroes.Add(heroNew);
+                        heroNew.SaveHero(heroes, heroes.Count-1);
                         Console.Clear();
                         break;
                     case "4":

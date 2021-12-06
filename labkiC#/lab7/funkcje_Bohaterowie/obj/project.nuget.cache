@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1DCr6Ynax4k0/csG5eD1H2hKlusVIOS+K383Bcu/eNQx4k8PyUTSArhG/9yYm4BdRWglYWiySXBSNC+Dz10pnA==",
+  "dgSpecHash": "DSDBgY9dtxUC4VYJXd1v+FPWYum8N1bg1rMltB16i4pZozX3Tz+9EoaJ+u/z0k18fVG477ViGQWJUo98AeGh0A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ThinkPad\\Desktop\\UniwersytetZajęcia\\UMG\\labkiC#\\lab7\\funkcje\\funkcje.csproj",
+  "projectFilePath": "C:\\Users\\ThinkPad\\Desktop\\UniwersytetZajęcia\\UMG\\labkiC#\\lab7\\funkcje_Bohaterowie\\funkcje.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ThinkPad\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\ThinkPad\\.nuget\\packages\\nuget.commandline\\5.8.0\\nuget.commandline.5.8.0.nupkg.sha512"

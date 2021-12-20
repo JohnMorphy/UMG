@@ -35,7 +35,7 @@ namespace funkcje
                 Console.WriteLine("{0} otrzymał {1} obrażeń!", heroes[x].Name, attack);
                 heroes[x].HPloss(attack);
             }
-            if(heroes[y].GetDexterity()>=unik)
+            else if(heroes[y].GetDexterity()>=unik)
             {
                 Console.WriteLine("{0} wykonał unik!", heroes[y].Name);
             }

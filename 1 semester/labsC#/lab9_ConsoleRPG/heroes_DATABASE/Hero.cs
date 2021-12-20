@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 using System.Collections.Generic;
 using System.Data.SQLite;
 
@@ -26,7 +27,7 @@ namespace funkcje
             {
                 Console.Clear();
                 Console.WriteLine("Pozostało {0} punktów do rozdania\r\n" + this.Name + " HP:{1} Str:{2} Dex:{3} Int:{4}", 11-i, this.HP, this.Strength, this.Dexterity, this.Intelligence);
-                Console.WriteLine("[1] strength\r\n[2] dexterity \r\n[3] intelligence");
+                Console.WriteLine("[1] strength\r\n[2] dexterity \r\n[3] intelligence\r\n [dowolny klawisz] losowo przydziel resztę punktów");
                 String level=Console.ReadLine();
                 switch(level)
                 {
@@ -40,9 +41,35 @@ namespace funkcje
                         UpIntelligence();
                         break;
                     default:
+                        for(;i<11;i++)
+                        {
+                            //TODO jak wysyłać obiekt gdy nie mamy jego nazwy i gdy nie znajduje się on w liście?
+                            Random rng = new Random();
+                            int nbr = rng.Next(0, 2);;
+                            switch(nbr)
+                            {
+                                case 0:
+                                    UpStrength();
+                                    Console.WriteLine("Dodano siłę");
+                                    break;
+                                case 1:
+                                    UpDexterity();
+                                    Console.WriteLine("Dodano zręczność");
+                                    break;
+                                case 2:
+                                    UpIntelligence();
+                                    Console.WriteLine("Dodano inteligencję");
+                                    break;
+
+                            }
+                        }
                         break;
                 }
             }
+            Console.Clear();
+            Console.WriteLine("Statystyki stworzonego bohatera\r\n" + this.Name + " HP:{0} Str:{1} Dex:{2} Int:{3}", this.HP, this.Strength, this.Dexterity, this.Intelligence);
+            Thread.Sleep(1500);
+            Console.Clear();
         }
         private void Init(String name = "", string myclass="adventurer", int strength = 1, int dexterity = 1, int intelligence = 1,  int HP = 55, int level = 1, int experience = 0)
         {
@@ -55,12 +82,11 @@ namespace funkcje
             this.Level=level;
             this.Experience=experience;
         }
-
         public string GetName() { return Name; }
         public int GetStrength() { return Strength; }
         public int GetDexterity() { return Dexterity; }
         public int GetIntelligence() { return Intelligence; }
-        public String GetClass() { return Class; }
+        public string GetClass() { return Class; }
         public int GetHP() { return HP; }
         public int GetLevel() { return Level; }
         public int GetExperience() { return Experience; }
@@ -76,11 +102,7 @@ namespace funkcje
         }
         public void HPreset()
         {
-            this.HP=50;
-        }
-        public void SpellCast(int attack)
-        {
-            this.HP=this.HP-attack;
+            this.HP=50+this.Strength*5;
         }
         public Hero(string name, string myclass)
         {
@@ -94,7 +116,6 @@ namespace funkcje
 
             }
         }
-
         public static void load(List<Hero> heroes, String name)
         {
             string cs = "Data Source=./heroes.db"; //connection string  (wskazuje sciezke do bazy danych)
@@ -105,12 +126,11 @@ namespace funkcje
             using SQLiteDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                Hero hero1 = new Hero(reader.GetString(1), reader.GetString(2));
-                hero1.Init(reader.GetString(1), reader.GetString(2), reader.GetInt32(3), reader.GetInt32(4), reader.GetInt32(5), reader.GetInt32(6), reader.GetInt32(7), reader.GetInt32(8));
+                Hero hero1 = new Hero(reader.GetString(0), reader.GetString(1));
+                hero1.Init(reader.GetString(0), reader.GetString(1), reader.GetInt32(2), reader.GetInt32(3), reader.GetInt32(4), reader.GetInt32(5), reader.GetInt32(6), reader.GetInt32(7));
                 heroes.Add(hero1);
             }
         }
-
         public static void StrengthGain(Hero hero)
         {
             switch(hero.GetStrength())
@@ -134,10 +154,8 @@ namespace funkcje
                     Console.WriteLine("UNLIMITED POWER!");
                     break;
             }
-            hero.UpLevel();
             hero.UpStrength();
         }
-
         public static void DexterityGain(Hero hero)
         {
             switch(hero.GetDexterity())
@@ -161,10 +179,8 @@ namespace funkcje
                     Console.WriteLine("UNLIMITED POWER!");
                     break;
             }
-            hero.UpLevel();
             hero.UpDexterity();            
         }
-
         public static void IntelligenceGain(Hero hero)
         {
             switch(hero.GetIntelligence())
@@ -173,53 +189,91 @@ namespace funkcje
                     Console.WriteLine("");
                     break;
                 case 8:
-                    Console.WriteLine("Siłą własnych rąk potrafisz zginać żelazne sztaby!\r\nMógłbyś pracować w cyrku");
+                    Console.WriteLine("Potrafisz manipulować ogniem\r\nMógłbyś pracować w cyrku");
                     break;
                 case 9:
-                    Console.WriteLine("Jesteś tak silny, że potrafisz siłą jedynie swoich mięśni otworzyć 2 tonowe wrota areny\r\nTo wygląda na niezłe wejście");
+                    Console.WriteLine("Twoja reputacja mędrca wyszła poza granice miasta\r\n");
                     break;
                 case 10:
-                    Console.WriteLine("Jesteś wystarczająco zręczny by niezauważenie przekraść się obok wiecznie czuwającego\r\nJesteś gotowy by przekraść się do krainy Bogów!");
+                    Console.WriteLine("Swoją siłą umysłu jesteś w stanie stworzyć portal do krainy Bogów\r\nJesteś gotowy wejść do krainy Bogów!");
                     break;
                 case 11:
-                    Console.WriteLine("Jednym ciosem topora scinasz drzewo, a jednym ciosem pięści posyłasz przeciętnego śmiertelnika do kostnicy\r\nPrzeciętni ludzie widzą cię jako pół Boga i boją się na ciebie spojrzeć");
+                    Console.WriteLine("Potrafisz nagiąć wolę większości istot\r\nPrzeciętni ludzie kłaniają się tobie na ulicach");
                     break;
                 default:
                     Console.WriteLine("UNLIMITED POWER!");
                     break;
             }
-            hero.UpLevel();
-            hero.UpDexterity();    
+            hero.UpIntelligence();    
+        }
+        public static void ExperienceGain(Hero hero, int exp)
+        {
+            this.Experience+=exp;
+        }
+        public static void RandomLevel(Hero hero)
+        {
+            Random rng = new Random();
+            int nbr = rng.Next(0, 2);;
+            switch(nbr)
+            {
+                case 0:
+                    hero.UpStrength();
+                    Console.WriteLine("Dodano siłę");
+                    break;
+                case 1:
+                    hero.UpDexterity();
+                    Console.WriteLine("Dodano zręczność");
+                    break;
+                case 2:
+                    hero.UpIntelligence();
+                    Console.WriteLine("Dodano inteligencję");
+                    break;
+
+            }
         }
         public static void LevelUp(List<Hero> heroes, int index)
         {
             Console.Clear();
-            if(heroes[index].GetExperience()>=heroes[index].GetLevel()*10)
+            //heroes[index].GetExperience()>=heroes[index].GetLevel()*10)
+            Console.WriteLine("W czym chcesz rozwinąć swojego bohatera?");
+            Console.WriteLine("\r\n[1] chcę rozwinąc jego siłę\r\n[2] chcę wyćwiczyć jego zręczność \r\n[3] chcę rozwijać jego wiedzę i mądrość\r\n[dowolny klawisz] losowo");
+            String choice = Console.ReadLine();
+            switch(choice)
             {
-                Console.WriteLine("W czym chcesz rozwinąć swojego bohatera?");
-                Console.WriteLine("\r\n[1] chcę rozwinąc jego siłę\r\n[2] chcę wyćwiczyć jego zręczność \r\n[3] chcę rozwijać jego wiedzę i mądrość\r\n[4] chcę nauczyć go jego unikalnej dyscypliny\r\n[dowolny klawisz] zakończ");
-                String choice = Console.ReadLine();
-                switch(choice)
-                {
-                    case "1":
-                        Console.Clear();
-                        StrengthGain(heroes[index]);
-                        break;
-                    case "2":
-                        Console.Clear();
-                        DexterityGain(heroes[index]);
-                        break;
-                    case "3":
-                        Console.Clear();
-                        IntelligenceGain(heroes[index]);
-                        break;    
-                    case "4":
-                        Console.Clear();
-                        break;
-                }
+                case "1":
+                    Console.Clear();
+                    StrengthGain(heroes[index]);
+                    break;
+                case "2":
+                    Console.Clear();
+                    DexterityGain(heroes[index]);
+                    break;
+                case "3":
+                    Console.Clear();
+                    IntelligenceGain(heroes[index]);
+                    break;    
+                default:
+                    Console.Clear();
+                    RandomLevel(heroes[index]);
+                    break;
+            }
+            heroes[index].UpLevel();
+            try
+            {
+                string cs = "Data Source=./heroes.db";
+                using var con = new SQLiteConnection(cs);
+                con.Open();
+                using var cmd = new SQLiteCommand(con);
+                cmd.CommandText = $"UPDATE Heroes SET Strength={heroes[index].GetStrength()}, Dexterity={heroes[index].GetDexterity()}, Intelligence={heroes[index].GetIntelligence()}, Level={heroes[index].GetLevel()}, Experience={heroes[index].GetExperience()}, HP={heroes[index].GetHP()} WHERE Name=\"{heroes[index].GetName()}\"";
+                cmd.Prepare();
+                cmd.ExecuteNonQuery();
+            }
+            catch(Exception x)
+            {
+                Console.WriteLine(x);
+                Console.WriteLine("Nie udało się zapisać bohatera!");
             }
         }
-
         public static void SaveHero(List<Hero> heroes, int index)
         {
             try

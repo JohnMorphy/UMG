@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eyUp4VoVQSFRF9TGAEk4slPCHh72k6QRyZqKsS5ICOdtUGFjOFGPthJszzYwtz010vDLEAHceFtXdEIrNKY6OQ==",
+  "dgSpecHash": "8RB1nhmS25KERq40hkCFDxtVANfz1bytPIhJh4QBrPrASHloRDRj0MUOCPZz/yhxAn2G8l0yImt2W6q9zavRRg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ThinkPad\\Desktop\\UniwersytetZajęcia\\UMG\\labkiC#\\lab9\\Bohaterowie_DATABASE\\funkcje.csproj",
+  "projectFilePath": "C:\\Users\\ThinkPad\\Desktop\\UniwersytetZajęcia\\Gdynia Maritime University\\1 semester\\labsC#\\lab9_ConsoleRPG\\heroes_DATABASE\\funkcje.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",

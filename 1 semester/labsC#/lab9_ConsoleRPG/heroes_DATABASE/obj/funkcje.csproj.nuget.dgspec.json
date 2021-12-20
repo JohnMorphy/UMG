@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ThinkPad\\Desktop\\UniwersytetZajęcia\\UMG\\labkiC#\\lab9\\Bohaterowie_DATABASE\\funkcje.csproj": {}
+    "C:\\Users\\ThinkPad\\Desktop\\UniwersytetZajęcia\\Gdynia Maritime University\\1 semester\\labsC#\\lab9_ConsoleRPG\\heroes_DATABASE\\funkcje.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ThinkPad\\Desktop\\UniwersytetZajęcia\\UMG\\labkiC#\\lab9\\Bohaterowie_DATABASE\\funkcje.csproj": {
+    "C:\\Users\\ThinkPad\\Desktop\\UniwersytetZajęcia\\Gdynia Maritime University\\1 semester\\labsC#\\lab9_ConsoleRPG\\heroes_DATABASE\\funkcje.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ThinkPad\\Desktop\\UniwersytetZajęcia\\UMG\\labkiC#\\lab9\\Bohaterowie_DATABASE\\funkcje.csproj",
+        "projectUniqueName": "C:\\Users\\ThinkPad\\Desktop\\UniwersytetZajęcia\\Gdynia Maritime University\\1 semester\\labsC#\\lab9_ConsoleRPG\\heroes_DATABASE\\funkcje.csproj",
         "projectName": "funkcje",
-        "projectPath": "C:\\Users\\ThinkPad\\Desktop\\UniwersytetZajęcia\\UMG\\labkiC#\\lab9\\Bohaterowie_DATABASE\\funkcje.csproj",
+        "projectPath": "C:\\Users\\ThinkPad\\Desktop\\UniwersytetZajęcia\\Gdynia Maritime University\\1 semester\\labsC#\\lab9_ConsoleRPG\\heroes_DATABASE\\funkcje.csproj",
         "packagesPath": "C:\\Users\\ThinkPad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ThinkPad\\Desktop\\UniwersytetZajęcia\\UMG\\labkiC#\\lab9\\Bohaterowie_DATABASE\\obj\\",
+        "outputPath": "C:\\Users\\ThinkPad\\Desktop\\UniwersytetZajęcia\\Gdynia Maritime University\\1 semester\\labsC#\\lab9_ConsoleRPG\\heroes_DATABASE\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ThinkPad\\AppData\\Roaming\\NuGet\\NuGet.Config"

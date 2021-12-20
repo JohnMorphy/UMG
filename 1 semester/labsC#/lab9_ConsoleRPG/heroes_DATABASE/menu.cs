@@ -17,6 +17,46 @@ namespace funkcje
                 Console.WriteLine("[{0}] " + heroes[i].Name + " Str:{1} Dex:{2} Int:{3}", i+1, heroes[i].GetStrength(), heroes[i].GetDexterity(), heroes[i].GetIntelligence());
             }
         }
+        static int levelupDisplay(List<Hero> heroes)
+        {
+            int x=1;
+            int[] List = new int[100];
+            for(int i=0; i<heroes.Count; i++)
+            {
+                if(heroes[i].GetExperience()>=heroes[i].GetLevel()*10)
+                {
+                    if(x==1)
+                    {
+                        Console.WriteLine("Wybierz bohatera, którego chcesz rozwinąć");
+                    }
+                    Console.WriteLine("[{0}] " + heroes[i].Name + " Str:{1} Dex:{2} Int:{3} Level:{4} Experience{5}", x, heroes[i].GetStrength(), heroes[i].GetDexterity(), heroes[i].GetIntelligence(), heroes[i].GetLevel(), heroes[i].GetExperience());
+                    x++;
+                    List[i]=x;
+                }
+            }
+            if(x==1)
+            {
+                Console.Clear();
+                Console.WriteLine("Żaden bohater nie jest gotowy by rozwinąć umiejętności");
+                Thread.Sleep(2000);
+                return 0;
+            }
+            Console.WriteLine("[dowolny klawisz] zmieniłem zdanie");
+            int choice;
+            bool success=int.TryParse(Console.ReadLine(), out choice);
+            if(success == true && choice<=x && choice>=0)
+            {
+                Hero.LevelUp(heroes, List[choice]);
+                return 0;
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("Nikt nie rozwinął umiejętności");
+                Thread.Sleep(2000);
+                return 0;                
+            }
+        }
         public static void Startmenu()
         {
             List<Hero> heroes = new List<Hero>();
@@ -79,7 +119,8 @@ namespace funkcje
                         break;
                     case "3":
                         Console.Clear();
-                        Console.WriteLine("Podaj nazwę nowego bohatera ");
+                        levelupDisplay(heroes);
+                        Console.Clear();
                         break;
                 }
 

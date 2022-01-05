@@ -29,7 +29,7 @@ namespace funkcje
                     {
                         Console.WriteLine("Wybierz bohatera, którego chcesz rozwinąć");
                     }
-                    Console.WriteLine("[{0}] " + heroes[i].Name + " Str:{1} Dex:{2} Int:{3} Level:{4} Experience{5}", x, heroes[i].GetStrength(), heroes[i].GetDexterity(), heroes[i].GetIntelligence(), heroes[i].GetLevel(), heroes[i].GetExperience());
+                    Console.WriteLine("[{0}] " + heroes[i].Name + " Str:{1} Dex:{2} Int:{3} Level:{4} Experience:{5}", x, heroes[i].GetStrength(), heroes[i].GetDexterity(), heroes[i].GetIntelligence(), heroes[i].GetLevel(), heroes[i].GetExperience());
                     x++;
                     List[i]=x;
                 }
@@ -69,7 +69,7 @@ namespace funkcje
             String choice="0";
             while(true)
             {
-                Console.WriteLine("Co chcesz zrobić? \r\n[1] walka 2 bohaterów na arenie - multiplayer\r\n[2] chcę utworzyć nowego bohatera \r\n[3] chcę wbić poziom na jednym z bohaterów\r\n[4] chcę wyruszyć na przygodę\r\n[0] zakończ");
+                Console.WriteLine("Co chcesz zrobić? \r\n[1] walka 2 bohaterów na arenie - multiplayer\r\n[2] chcę utworzyć nowego bohatera \r\n[3] chcę wbić poziom na jednym z bohaterów\r\n[4] chcę wyruszyć na przygodę\r\n[5] chcę usunąć bohatera\r\n[0] zakończ");
                 choice = Console.ReadLine();
                 switch(choice)
                 {
@@ -121,6 +121,29 @@ namespace funkcje
                         Console.Clear();
                         levelupDisplay(heroes);
                         Console.Clear();
+                        break;
+                    case "4":
+                        //TODO basic adventure
+                        break;
+                    case "5":
+                        int z;
+                        Console.Clear();
+                        Console.Clear();
+                        Console.WriteLine("Wybierz bohatera którego chcesz usunąć");
+                        display(heroes);
+                        Console.WriteLine("[dowolny klawisz] zmieniam zdanie, nie chcę usuwać bohatera");
+                        Console.WriteLine();
+                        bool success2 = int.TryParse(Console.ReadLine(), out z);
+                        if(success2 == true && z<=heroes.Count)
+                        {
+                            Hero.DeleteHero(heroes, z-1);
+                            Hero.load(heroes, "heroes");
+                            break;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Nie usunięto bohatera");
+                        }
                         break;
                 }
 

@@ -20,6 +20,12 @@ namespace funkcje
         public void UpStrength() { this.Strength += 1; this.HP += 5; }
         public void UpDexterity() { this.Dexterity += 1; }
         public void UpIntelligence() { this.Intelligence += 1; }
+        public void ExperienceGain(Hero hero, int exp) 
+        {
+            this.Experience+=exp;
+            Console.WriteLine(Name + " +"+exp+"exp");
+            hero.Save();
+        }
         private void InitAdventurer(String name="")
         {
             Init(name);
@@ -43,7 +49,6 @@ namespace funkcje
                     default:
                         for(;i<11;i++)
                         {
-                            //TODO jak wysyłać obiekt gdy nie mamy jego nazwy i gdy nie znajduje się on w liście?
                             Random rng = new Random();
                             int nbr = rng.Next(0, 2);;
                             switch(nbr)
@@ -60,7 +65,6 @@ namespace funkcje
                                     UpIntelligence();
                                     Console.WriteLine("Dodano inteligencję");
                                     break;
-
                             }
                         }
                         break;
@@ -118,6 +122,7 @@ namespace funkcje
         }
         public static void load(List<Hero> heroes, String name)
         {
+            heroes.Clear();
             string cs = "Data Source=./heroes.db"; //connection string  (wskazuje sciezke do bazy danych)
             using var con = new SQLiteConnection(cs);
             con.Open();
@@ -206,10 +211,6 @@ namespace funkcje
             }
             hero.UpIntelligence();    
         }
-        public static void ExperienceGain(Hero hero, int exp)
-        {
-            this.Experience+=exp;
-        }
         public static void RandomLevel(Hero hero)
         {
             Random rng = new Random();
@@ -257,14 +258,17 @@ namespace funkcje
                     RandomLevel(heroes[index]);
                     break;
             }
-            heroes[index].UpLevel();
+            heroes[index].Save();
+        }
+        public void Save()
+        {
             try
             {
                 string cs = "Data Source=./heroes.db";
                 using var con = new SQLiteConnection(cs);
                 con.Open();
                 using var cmd = new SQLiteCommand(con);
-                cmd.CommandText = $"UPDATE Heroes SET Strength={heroes[index].GetStrength()}, Dexterity={heroes[index].GetDexterity()}, Intelligence={heroes[index].GetIntelligence()}, Level={heroes[index].GetLevel()}, Experience={heroes[index].GetExperience()}, HP={heroes[index].GetHP()} WHERE Name=\"{heroes[index].GetName()}\"";
+                cmd.CommandText = $"UPDATE Heroes SET Strength={Strength}, Dexterity={Dexterity}, Intelligence={Intelligence}, Level={Level}, Experience={Experience}, HP={HP} WHERE Name=\"{Name}\"";
                 cmd.Prepare();
                 cmd.ExecuteNonQuery();
             }
@@ -300,7 +304,27 @@ namespace funkcje
                 Console.WriteLine(x);
                 Console.WriteLine("Nie udało się zapisać bohatera!");
             }
-
+        }
+        public static void DeleteHero(List<Hero> heroes, int index)
+        {
+            try
+            {
+                string cs = "Data Source=./heroes.db"; //connection string  (wskazuje sciezke do bazy danych)
+                using var con = new SQLiteConnection(cs);
+                con.Open();
+                using var cmd = new SQLiteCommand(con);
+                cmd.CommandText = "DELETE FROM Heroes WHERE Name=@Name";
+                cmd.Parameters.AddWithValue("@Name", heroes[index].GetName());
+                cmd.Prepare();
+                cmd.ExecuteNonQuery();
+            }
+            catch(Exception x)
+            {
+                Console.WriteLine(x);
+                Console.WriteLine("Nie udało się usunąć bohatera!");
+            }
+            Console.WriteLine("Pomyślnie usunięto bohatera");
+            Thread.Sleep(500);
         }
     }
 }

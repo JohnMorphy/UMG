@@ -3,7 +3,7 @@ package com.company;
 public class BinarySearch {
     public static int Search(int [] list, int value)
     {
-        int middle = 0;
+        int middle;
         int fromPosition=0;
         int toPosition=list.length;
         while(!(fromPosition>toPosition)) {

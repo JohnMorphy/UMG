@@ -40,11 +40,11 @@ public class MergeSort {
     }
 
 
-    public static void Scalanie(int[] tab, int[] pomocnicza, Three[] listaTrójek, int lok)
+    public static void Scalanie(int[] tab, int[] pomocnicza, Three[] listOfThrees, int lok)
     {
-        int odPoz=listaTrójek[lok].x;
-        int doPoz=listaTrójek[lok].z;
-        int srodek=listaTrójek[lok].y;
+        int odPoz=listOfThrees[lok].x;
+        int doPoz=listOfThrees[lok].z;
+        int srodek=listOfThrees[lok].y;
         for(int i=odPoz; i<=doPoz; i++)
             pomocnicza[i]=tab[i];
         int k=odPoz;
@@ -80,5 +80,5 @@ class Three
         System.out.println(this.x + " " + this.y + " " + this.z);
     }
 
-    public Three() {}
+    //public Three() {}
 }

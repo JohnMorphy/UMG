@@ -16,8 +16,10 @@ namespace funkcje
         private String Class;
         private int Level;
         private int Experience;
+        private int Stage;
+        private int Adventure;
         public void UpLevel()   { this.Experience=this.Experience-10 * this.Level; this.Level +=1;}
-        public void UpStrength() { this.Strength += 1; this.HP += 5; }
+        public void UpStrength() { this.Strength += 1; this.HP += 3; }
         public void UpDexterity() { this.Dexterity += 1; }
         public void UpIntelligence() { this.Intelligence += 1; }
         public void ExperienceGain(Hero hero, int exp) 
@@ -75,14 +77,14 @@ namespace funkcje
             Thread.Sleep(1500);
             Console.Clear();
         }
-        private void Init(String name = "", string myclass="adventurer", int strength = 1, int dexterity = 1, int intelligence = 1,  int HP = 55, int level = 1, int experience = 0)
+        private void Init(String name = "", string myclass="adventurer", int strength = 1, int dexterity = 1, int intelligence = 1,  int HP = 53, int level = 1, int experience = 0)
         {
             this.Name = name;
             this.Strength = strength;
             this.Dexterity = dexterity;
             this.Intelligence = intelligence;
             this.Class = myclass;
-            this.HP = 50 + strength*5;
+            this.HP = 50 + strength*3;
             this.Level=level;
             this.Experience=experience;
         }
@@ -120,20 +122,20 @@ namespace funkcje
 
             }
         }
-        public static void load(List<Hero> heroes, String name)
+        public static void load(List<Hero> avatar, String name)
         {
-            heroes.Clear();
-            string cs = "Data Source=./heroes.db"; //connection string  (wskazuje sciezke do bazy danych)
+            avatar.Clear();
+            string cs = "Data Source=./"+ name +".db"; //connection string  (wskazuje sciezke do bazy danych)
             using var con = new SQLiteConnection(cs);
             con.Open();
-            string client = "SELECT * FROM Heroes";
+            string client = "SELECT * FROM " + name;
             using var cmd = new SQLiteCommand(client, con);
             using SQLiteDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
                 Hero hero1 = new Hero(reader.GetString(0), reader.GetString(1));
                 hero1.Init(reader.GetString(0), reader.GetString(1), reader.GetInt32(2), reader.GetInt32(3), reader.GetInt32(4), reader.GetInt32(5), reader.GetInt32(6), reader.GetInt32(7));
-                heroes.Add(hero1);
+                avatar.Add(hero1);
             }
         }
         public static void StrengthGain(Hero hero)
@@ -268,7 +270,7 @@ namespace funkcje
                 using var con = new SQLiteConnection(cs);
                 con.Open();
                 using var cmd = new SQLiteCommand(con);
-                cmd.CommandText = $"UPDATE Heroes SET Strength={Strength}, Dexterity={Dexterity}, Intelligence={Intelligence}, Level={Level}, Experience={Experience}, HP={HP} WHERE Name=\"{Name}\"";
+                cmd.CommandText = $"UPDATE Heroes SET Strength={Strength}, Dexterity={Dexterity}, Intelligence={Intelligence}, Level={Level}, Experience={Experience} WHERE Name=\"{Name}\"";
                 cmd.Prepare();
                 cmd.ExecuteNonQuery();
             }

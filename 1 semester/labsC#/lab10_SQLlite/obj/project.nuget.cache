@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "hkhAM9hmXfJ2e3GlEUZ19dxMLjr9PJ3hCmpJgeqQSuQ/5AJ+Ez16hycO5J9PZmlJciRUWCFbL0zpEM2JTZxe4g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ThinkPad\\Desktop\\UniwersytetZajęcia\\Gdynia Maritime University\\1 semester\\labsC#\\lab10_SQLlite\\lab10_SQLlite.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.data.sqlite\\6.0.1\\microsoft.data.sqlite.6.0.1.nupkg.sha512",
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.1\\microsoft.data.sqlite.core.6.0.1.nupkg.sha512",
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.0.6\\sqlitepclraw.bundle_e_sqlite3.2.0.6.nupkg.sha512",
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\sqlitepclraw.core\\2.0.6\\sqlitepclraw.core.2.0.6.nupkg.sha512",
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.0.6\\sqlitepclraw.lib.e_sqlite3.2.0.6.nupkg.sha512",
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.0.6\\sqlitepclraw.provider.e_sqlite3.2.0.6.nupkg.sha512",
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
+  ],
+  "logs": []
+}

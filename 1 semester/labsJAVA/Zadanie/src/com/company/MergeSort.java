@@ -78,7 +78,4 @@ class Three
 
     //public void Print()
     //System.out.println(this.x + " " + this.y + " " + this.z);
-
-
-    //public Three() {}
 }

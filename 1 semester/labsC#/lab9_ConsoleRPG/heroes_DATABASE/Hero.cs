@@ -19,7 +19,7 @@ namespace funkcje
         private int Stage;
         private int Adventure;
         public void UpLevel()   { this.Experience=this.Experience-10 * this.Level; this.Level +=1;}
-        public void UpStrength() { this.Strength += 1; this.HP += 3; }
+        public void UpStrength() { this.Strength += 1; this.HP += 5; }
         public void UpDexterity() { this.Dexterity += 1; }
         public void UpIntelligence() { this.Intelligence += 1; }
         public void ExperienceGain(Hero hero, int exp) 
@@ -77,14 +77,14 @@ namespace funkcje
             Thread.Sleep(1500);
             Console.Clear();
         }
-        private void Init(String name = "", string myclass="adventurer", int strength = 1, int dexterity = 1, int intelligence = 1,  int HP = 53, int level = 1, int experience = 0)
+        private void Init(String name = "", string myclass="adventurer", int strength = 1, int dexterity = 1, int intelligence = 1,  int HP = 55, int level = 1, int experience = 0)
         {
             this.Name = name;
             this.Strength = strength;
             this.Dexterity = dexterity;
             this.Intelligence = intelligence;
             this.Class = myclass;
-            this.HP = 50 + strength*3;
+            this.HP = 50 + strength*5;
             this.Level=level;
             this.Experience=experience;
         }

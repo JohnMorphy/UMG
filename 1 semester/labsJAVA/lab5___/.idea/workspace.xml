@@ -1,60 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="6fa03f0c-ab8b-4339-b285-a313e0d0ddfe" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../java_KaiserJan/lab1.jbf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../java_KaiserJan/lab2.jbf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../java_KaiserJan/lab3.jbf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../java_KaiserJan/lab4/lab4.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../java_KaiserJan/lab4/out/production/lab4/com/company/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../java_KaiserJan/lab4/src/com/company/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../java_KaiserJan/lab5___/lab5___.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../java_KaiserJan/lab5___/out/production/lab5___/com/company/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../java_KaiserJan/lab5___/out/production/lab5___/com/company/Sortowanie.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../java_KaiserJan/lab5___/src/com/company/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../java_KaiserJan/lab5___/src/com/company/Sortowanie.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../labkiC#/lab7/funkcje_Bohaterowie/.vscode/launch.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../labkiC#/lab7/funkcje_Bohaterowie/.vscode/tasks.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../labkiC#/lab7/funkcje_Bohaterowie/Adam Małysz.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../labkiC#/lab7/funkcje_Bohaterowie/Andrzej Gołota.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../labkiC#/lab7/funkcje_Bohaterowie/Program.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../labkiC#/lab7/funkcje_Bohaterowie/William Śmiech.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../labkiC#/lab7/funkcje_Bohaterowie/bin/Debug/net5.0/Newtonsoft.Json.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../labkiC#/lab7/funkcje_Bohaterowie/bin/Debug/net5.0/funkcje.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../labkiC#/lab7/funkcje_Bohaterowie/bin/Debug/net5.0/funkcje.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../labkiC#/lab7/funkcje_Bohaterowie/bin/Debug/net5.0/funkcje.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../labkiC#/lab7/funkcje_Bohaterowie/bin/Debug/net5.0/funkcje.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../labkiC#/lab7/funkcje_Bohaterowie/bin/Debug/net5.0/funkcje.runtimeconfig.dev.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../labkiC#/lab7/funkcje_Bohaterowie/bin/Debug/net5.0/funkcje.runtimeconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../labkiC#/lab7/funkcje_Bohaterowie/bin/Debug/net5.0/ref/funkcje.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../labkiC#/lab7/funkcje_Bohaterowie/funkcje.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../labkiC#/lab7/funkcje_Bohaterowie/obj/Debug/net5.0/.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../labkiC#/lab7/funkcje_Bohaterowie/obj/Debug/net5.0/apphost.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../labkiC#/lab7/funkcje_Bohaterowie/obj/Debug/net5.0/funkcje.AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../labkiC#/lab7/funkcje_Bohaterowie/obj/Debug/net5.0/funkcje.AssemblyInfoInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../labkiC#/lab7/funkcje_Bohaterowie/obj/Debug/net5.0/funkcje.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../labkiC#/lab7/funkcje_Bohaterowie/obj/Debug/net5.0/funkcje.assets.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../labkiC#/lab7/funkcje_Bohaterowie/obj/Debug/net5.0/funkcje.csproj.AssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../labkiC#/lab7/funkcje_Bohaterowie/obj/Debug/net5.0/funkcje.csproj.CopyComplete" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../labkiC#/lab7/funkcje_Bohaterowie/obj/Debug/net5.0/funkcje.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../labkiC#/lab7/funkcje_Bohaterowie/obj/Debug/net5.0/funkcje.csproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../labkiC#/lab7/funkcje_Bohaterowie/obj/Debug/net5.0/funkcje.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../labkiC#/lab7/funkcje_Bohaterowie/obj/Debug/net5.0/funkcje.genruntimeconfig.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../labkiC#/lab7/funkcje_Bohaterowie/obj/Debug/net5.0/funkcje.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../labkiC#/lab7/funkcje_Bohaterowie/obj/Debug/net5.0/ref/funkcje.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../labkiC#/lab7/funkcje_Bohaterowie/obj/funkcje.csproj.nuget.dgspec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../labkiC#/lab7/funkcje_Bohaterowie/obj/funkcje.csproj.nuget.g.props" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../labkiC#/lab7/funkcje_Bohaterowie/obj/funkcje.csproj.nuget.g.targets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../labkiC#/lab7/funkcje_Bohaterowie/obj/project.assets.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../labkiC#/lab7/funkcje_Bohaterowie/obj/project.nuget.cache" beforeDir="false" />
-    </list>
+    <list default="true" id="6fa03f0c-ab8b-4339-b285-a313e0d0ddfe" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="ProjectId" id="22E5gSZeJDj7Bw6bmqj4WOu0fke" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -66,6 +23,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

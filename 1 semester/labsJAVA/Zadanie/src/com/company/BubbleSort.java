@@ -20,6 +20,6 @@ public class BubbleSort
                 }
             }
             poz++;
-        }while(posortowane==false);
+        }while(!posortowane);
     }
 }

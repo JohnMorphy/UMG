@@ -5,11 +5,22 @@ import java.util.Random;
 
 public class Tools {
 
-    static void FillIn(int[] list)
+    static void Set()
+    {
+        int list[] = new int[10];
+        int auxList[] = new int[10];
+        Tools.FillIn(list, 11);
+        Tools.AuxList(list, auxList);
+        BubbleSort.Sort(list);
+        InsertionSort.Sort(list);
+        MergeSort.Sort(list);
+    }
+
+    static void FillIn(int[] list, int y)
     {
         Random rand = new Random();
         for(int i=0; i<list.length; i++)
-            list[i] = rand.nextInt(10001);
+            list[i] = rand.nextInt(y);
     }
     static void AuxList(int[] list, int[] auxList )
     {
@@ -22,12 +33,12 @@ public class Tools {
         for (int j : list) System.out.print(j + " ");
         System.out.println();
     }
-    static void Test(int x)
+    static void Test(int x, int y)
     {
-        System.out.println("Czasy sortowań dla tablicy "+ x +" elementowej wypełnionej losowymi wartościami w zakresie 0 do 10000");
+        System.out.println("Czasy sortowań dla tablicy "+ x +" elementowej wypełnionej losowymi wartościami w zakresie od 0 do " + y);
         int list[] = new int[x];
         int auxList[] = new int[x];
-        Tools.FillIn(list);
+        Tools.FillIn(list, y+1);
         Tools.AuxList(list, auxList);
 
         long start = System.nanoTime();

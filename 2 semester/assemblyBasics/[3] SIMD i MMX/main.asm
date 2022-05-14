@@ -7,7 +7,7 @@ ExitProcess proto,dwExitCode:dword
 .data
 	arrayUser byte 0h, 1h, 2h, 6h, 30 DUP(1h)
 	arrayUser2 byte 5h, 5h, 3h, 2h, 30 DUP(2h)
-	arrayAdded byte 34 DUP(0h)
+	arrayAdded byte 40 DUP(0h)
 
 .code
 main proc

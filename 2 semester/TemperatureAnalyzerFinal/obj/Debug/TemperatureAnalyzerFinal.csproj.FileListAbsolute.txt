@@ -9,5 +9,4 @@ C:\Users\ThinkPad\Desktop\UniwersytetZajęcia\Gdynia Maritime University\2 semes
 C:\Users\ThinkPad\Desktop\UniwersytetZajęcia\Gdynia Maritime University\2 semester\TemperatureAnalyzerFinal\obj\Debug\TemperatureAnalyzerFinal.csproj.CoreCompileInputs.cache
 C:\Users\ThinkPad\Desktop\UniwersytetZajęcia\Gdynia Maritime University\2 semester\TemperatureAnalyzerFinal\obj\Debug\TemperatureAnalyzerFinal.exe
 C:\Users\ThinkPad\Desktop\UniwersytetZajęcia\Gdynia Maritime University\2 semester\TemperatureAnalyzerFinal\obj\Debug\TemperatureAnalyzerFinal.pdb
-C:\Users\ThinkPad\Desktop\UniwersytetZajęcia\Gdynia Maritime University\2 semester\TemperatureAnalyzerFinal\obj\Debug\TemperatureAnalyzerFinal.Failure.resources
 C:\Users\ThinkPad\Desktop\UniwersytetZajęcia\Gdynia Maritime University\2 semester\TemperatureAnalyzerFinal\obj\Debug\TemperatureAnalyzerFinal.ChartData.resources

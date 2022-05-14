@@ -1,0 +1,6 @@
+File Path: C:\Users\ThinkPad\Desktop\UniwersytetZajęcia\Gdynia Maritime University\2 semester\TemperatureAnalyzerFinal\TESTS\probes1.txt
+Number of measuerements: 30
+Minimal value: -4,021636
+Maximal value: 4,881695
+Average value: 0,2244183
+Variation: 5,540665

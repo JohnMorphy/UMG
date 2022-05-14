@@ -4,7 +4,7 @@ public class ReversePolishNotation {
 
     public static int sum(String RPN) {
         String[] splitRPN = RPN.split(" ");
-        Stos<Integer> valueStack = new Stos<Integer>();
+        Stack<Integer> valueStack = new Stack<Integer>();
         String a;
         int k = 0;
         while (k < splitRPN.length) {

@@ -6,14 +6,11 @@
 ExitProcess proto,dwExitCode:dword
 
 .data
-	witam sword -1
-	value sword 0
+	; declare variables here
 .code
 main proc
-	test word ptr witam,8000h
-	pushfd
-	popfd
+	; write your code here
 
-	invoke ExitProcess,value
+	invoke ExitProcess,0
 main endp
 end main

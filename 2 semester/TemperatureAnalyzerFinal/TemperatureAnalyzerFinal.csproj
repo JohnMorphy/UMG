@@ -53,12 +53,7 @@
     <Compile Include="ChartData.Designer.cs">
       <DependentUpon>ChartData.cs</DependentUpon>
     </Compile>
-    <Compile Include="Failure.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Failure.Designer.cs">
-      <DependentUpon>Failure.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Data.cs" />
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,9 +64,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ChartData.resx">
       <DependentUpon>ChartData.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Failure.resx">
-      <DependentUpon>Failure.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>

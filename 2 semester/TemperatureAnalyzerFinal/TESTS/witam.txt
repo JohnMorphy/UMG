@@ -1,0 +1,5 @@
+Number of measuerements: System.Windows.Forms.Label, Text: 5
+Minimal value: System.Windows.Forms.Label, Text: 1
+Maximal value: System.Windows.Forms.Label, Text: 5
+Average value: System.Windows.Forms.Label, Text: 3
+Variation: System.Windows.Forms.Label, Text: 2

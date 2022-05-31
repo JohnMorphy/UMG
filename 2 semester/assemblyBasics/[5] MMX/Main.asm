@@ -7,6 +7,7 @@ ExitProcess proto,dwExitCode:dword
 .data
 	intArray BYTE 1,2,3,4,5,6,7,8
 	intArray2 BYTE 2,3,4,5,6,7,8,9
+	check BYTE ?
 
 .code
 main proc
@@ -15,11 +16,15 @@ main proc
 	mov esi,OFFSET intArray2
 	
 	MOVQ mm0, [edx]
-	; paddb mm0, [esi]
+	paddb mm0, [esi]
 	
-	; emms
+	MOVQ [esi], mm0
 
-	invoke ExitProcess,ecx
+	emms
+
+	invoke ExitProcess,0
+
 main endp
 
 end main
+

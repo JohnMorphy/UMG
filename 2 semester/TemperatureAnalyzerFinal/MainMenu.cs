@@ -27,8 +27,11 @@ namespace TemperatureAnalyzerFinal
             LoadFile.Filter = "txt files (*.txt)|*.txt";
             var filePath = string.Empty;
 
-            if(LoadFile.ShowDialog() == DialogResult.OK)
-            { 
+            if(LoadFile.ShowDialog() != DialogResult.OK)
+            return null;
+
+            try
+            {
                 filePath = LoadFile.FileName;
                 var fileStream = LoadFile.OpenFile();
                 Data measurements = new Data();
@@ -47,10 +50,9 @@ namespace TemperatureAnalyzerFinal
                     }
                 }
                 fileStream.Close();
-
                 if (measurements.GetCount() <= 0)
                 {
-                    MessageBox.Show("Not enough data");                   
+                    MessageBox.Show("Not enough data");
                     return null;
                 }
                 else
@@ -59,8 +61,12 @@ namespace TemperatureAnalyzerFinal
                     MessageBox.Show("Successfully loaded a file");
                     return measurements;
                 }
-            }            
-            return null;  
+            }
+            catch
+            {
+                MessageBox.Show("Can't load the file");
+                return null;
+            }
         }
 
         public Data data;
@@ -104,8 +110,8 @@ namespace TemperatureAnalyzerFinal
                 }
                 MessageBox.Show("Successfully saved a file");
             }
-            catch (Exception ex)
-            { MessageBox.Show(ex.Message); }
+            catch
+            { MessageBox.Show("Can't save the file"); }
             
         }
 

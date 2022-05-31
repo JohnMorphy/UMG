@@ -106,14 +106,14 @@ public class Heap<T extends Comparable<T>> {
     }
 
     public static void main(String[] args) {
-        Heap<Osoba> heap0 =new Heap<>();
-        heap0.dopisz(new Osoba());
-        heap0.dopisz(new Osoba("Nowak", "Kazimierz", "1998-3-11"));
-        heap0.dopisz(new Osoba("Żabiński", "Mateusz", "1992-11-1"));
-        heap0.dopisz(new Osoba("Angielska", "Anna", "1990-11-1"));
-        heap0.dopisz(new Osoba("Wyczliński", "Krzysztof", "2002-1-1"));
+        Heap<Osoba> heap1 =new Heap<>();
+        heap1.dopisz(new Osoba());
+        heap1.dopisz(new Osoba("Nowak", "Kazimierz", "1998-3-11"));
+        heap1.dopisz(new Osoba("Żabiński", "Mateusz", "1992-11-1"));
+        heap1.dopisz(new Osoba("Angielska", "Anna", "1990-11-1"));
+        heap1.dopisz(new Osoba("Wyczliński", "Krzysztof", "2002-1-1"));
         //kopiec0.zabierz();
-        heap0.drukuj();
+        heap1.drukuj();
 
 
         /*

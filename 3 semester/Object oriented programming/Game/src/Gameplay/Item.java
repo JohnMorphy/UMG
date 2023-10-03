@@ -1,2 +1,10 @@
-package Gameplay;public class Item {
+package Gameplay;
+
+public class Item {
+
+    private String name;
+
+    private int price;
+
+
 }

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="20894d19-2560-4c30-8903-6375fdab4643" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://wekrmpc15.am.gdynia.pl/www/serwisSQL/service.asmx" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.disco" MetadataType="Disco" ID="5342c7ff-d1f6-4bf0-9c1c-e54601804d4d" SourceId="1" SourceUrl="http://wekrmpc15.am.gdynia.pl/www/serwisSQL/service.asmx?disco" />
+    <MetadataFile FileName="DataSet1.xsd" MetadataType="Schema" ID="4ae25168-e233-427f-a5cc-75142717e029" SourceId="1" SourceUrl="http://wekrmpc15.am.gdynia.pl/www/serwisSQL/service.asmx?schema=DataSet1" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="f9a1be57-0c84-40e4-bb85-00b5d66452a6" SourceId="1" SourceUrl="http://wekrmpc15.am.gdynia.pl/www/serwisSQL/service.asmx?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

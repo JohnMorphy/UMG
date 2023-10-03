@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DataSet1.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DataSet1.xsd" id="DataSet1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="student">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="id_studenta" type="xs:int" />
+              <xs:element name="nazwisko">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="imie">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="data_urodzenia" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="nr_albumu">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="adres_miasto">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="adres_ulica">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="oceny">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="numer" type="xs:int" />
+              <xs:element name="id_studenta" type="xs:int" />
+              <xs:element name="id_przedmiotu" type="xs:int" />
+              <xs:element name="ocena" type="xs:float" />
+              <xs:element minOccurs="0" name="data" type="xs:dateTime" />
+              <xs:element name="rok_akademicki">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="specjalnosc">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="semestr" type="xs:short" />
+              <xs:element minOccurs="0" name="Wykladowca" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="lata">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="rok_akademicki">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="wykladowcy">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="id_wykladowcy" type="xs:int" />
+              <xs:element minOccurs="0" name="Nazwisko">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Imię">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Stopień_x0020_naukowy">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="stopnie_naukowe">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="stopien_naukowy">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="pełna_nazwa_stopnia">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="przedmioty">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="id_przedmiotu" type="xs:int" />
+              <xs:element name="przedmiot">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:student" />
+      <xs:field xpath="mstns:id_studenta" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="oceny_Constraint1">
+      <xs:selector xpath=".//mstns:oceny" />
+      <xs:field xpath="mstns:numer" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="lata_Constraint1">
+      <xs:selector xpath=".//mstns:lata" />
+      <xs:field xpath="mstns:rok_akademicki" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="wykladowcy_Constraint1">
+      <xs:selector xpath=".//mstns:wykladowcy" />
+      <xs:field xpath="mstns:id_wykladowcy" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="stopnie_naukowe_Constraint1">
+      <xs:selector xpath=".//mstns:stopnie_naukowe" />
+      <xs:field xpath="mstns:stopien_naukowy" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="przedmioty_Constraint1">
+      <xs:selector xpath=".//mstns:przedmioty" />
+      <xs:field xpath="mstns:id_przedmiotu" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="oceny_FK03" msdata:parent="student" msdata:child="oceny" msdata:parentkey="id_studenta" msdata:childkey="id_studenta" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" />
+      <msdata:Relationship name="oceny_FK00" msdata:parent="lata" msdata:child="oceny" msdata:parentkey="rok_akademicki" msdata:childkey="rok_akademicki" />
+      <msdata:Relationship name="oceny_FK04" msdata:parent="wykladowcy" msdata:child="oceny" msdata:parentkey="id_wykladowcy" msdata:childkey="Wykladowca" />
+      <msdata:Relationship name="wykladowcy_FK00" msdata:parent="stopnie_naukowe" msdata:child="wykladowcy" msdata:parentkey="stopien_naukowy" msdata:childkey="Stopień_x0020_naukowy" />
+      <msdata:Relationship name="oceny_FK01" msdata:parent="przedmioty" msdata:child="oceny" msdata:parentkey="id_przedmiotu" msdata:childkey="id_przedmiotu" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

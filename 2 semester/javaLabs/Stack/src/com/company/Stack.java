@@ -9,21 +9,6 @@ public class Stack<Element> {
         StackObject second =null;
     }
 
-    public void push(Element add)
-    {
-        StackObject oldFirst= first;
-        first = new StackObject();
-        first.element=add;
-        first.second =oldFirst;
-        N++;
-    }
-
-    public Element peek()
-    {
-        if(isEmpty()) return null;
-        return first.element;
-    }
-
     public Element pop()
     {
         if(isEmpty()) return null;
@@ -31,6 +16,21 @@ public class Stack<Element> {
         StackObject buffer = first;
         first = first.second;
         return buffer.element;
+    }
+
+    public void push(Element add)
+    {
+        StackObject oldFirst= first;
+        first = new StackObject();
+        first.element = add;
+        first.second = oldFirst;
+        N++;
+    }
+
+    public Element peek()
+    {
+        if(isEmpty()) return null;
+        return first.element;
     }
 
     public boolean isEmpty() {return N==0;}

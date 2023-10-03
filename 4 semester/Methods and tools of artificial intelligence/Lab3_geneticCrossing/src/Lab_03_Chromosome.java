@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Random;
 
-public interface Chromosome_lab3 {
+public interface Lab_03_Chromosome {
         //for testing
         static void fillWithZeros(byte[] arr) {
             Arrays.fill(arr, (byte) 0);
@@ -50,7 +50,7 @@ public interface Chromosome_lab3 {
 
             for (int i = 0; i < numOfGenomes; i++) {
                 while(true) {
-                    Chromosome_lab3.fillWithRandom(values[i]);
+                    Lab_03_Chromosome.fillWithRandom(values[i]);
                     long decimal = toDecimal(values[i]);
                     double real = getRealValue(lowerBound, upperBound, decimal, resolution);
                     if(real<=upperBound) {

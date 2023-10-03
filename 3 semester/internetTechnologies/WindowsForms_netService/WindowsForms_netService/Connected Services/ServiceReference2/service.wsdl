@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://wekrmpc15.am.gdynia.pl/www/serwisSQL//" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://wekrmpc15.am.gdynia.pl/www/serwisSQL//" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://wekrmpc15.am.gdynia.pl/www/serwisSQL//">
+      <s:import namespace="http://tempuri.org/DataSet1.xsd" />
+      <s:import schemaLocation="http://wekrmpc15.am.gdynia.pl/www/serwisSQL/service.asmx?schema=DataSet1" namespace="http://tempuri.org/DataSet1.xsd" />
+      <s:element name="bazaStudentow">
+        <s:complexType />
+      </s:element>
+      <s:element name="bazaStudentowResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="bazaStudentowResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/DataSet1.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="bazaStudentowAktualizacja">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="baza">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/DataSet1.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="bazaStudentowAktualizacjaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="bazaStudentowAktualizacjaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataSet1" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:any namespace="http://tempuri.org/DataSet1.xsd" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="bazaStudentowSoapIn">
+    <wsdl:part name="parameters" element="tns:bazaStudentow" />
+  </wsdl:message>
+  <wsdl:message name="bazaStudentowSoapOut">
+    <wsdl:part name="parameters" element="tns:bazaStudentowResponse" />
+  </wsdl:message>
+  <wsdl:message name="bazaStudentowAktualizacjaSoapIn">
+    <wsdl:part name="parameters" element="tns:bazaStudentowAktualizacja" />
+  </wsdl:message>
+  <wsdl:message name="bazaStudentowAktualizacjaSoapOut">
+    <wsdl:part name="parameters" element="tns:bazaStudentowAktualizacjaResponse" />
+  </wsdl:message>
+  <wsdl:message name="bazaStudentowHttpGetIn" />
+  <wsdl:message name="bazaStudentowHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet1" />
+  </wsdl:message>
+  <wsdl:message name="bazaStudentowHttpPostIn" />
+  <wsdl:message name="bazaStudentowHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet1" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="bazaStudentow">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zwraca obiekt DataSet1 reprezentujący strukturę  bazy danych studenci (MS SQLServer).&lt;br /&gt;Tylko tabela student jest wypełnona danymi</wsdl:documentation>
+      <wsdl:input message="tns:bazaStudentowSoapIn" />
+      <wsdl:output message="tns:bazaStudentowSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="bazaStudentowAktualizacja">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Pobiera obiekt DataSet1 z wypełnoną danymi tabelą student i aktualizuje tabelę na serwerze - baza danych studenci MS SQLServer.&lt;br /&gt;Zwraca liczbę zaktualizowanch wierszy</wsdl:documentation>
+      <wsdl:input message="tns:bazaStudentowAktualizacjaSoapIn" />
+      <wsdl:output message="tns:bazaStudentowAktualizacjaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ServiceHttpGet">
+    <wsdl:operation name="bazaStudentow">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zwraca obiekt DataSet1 reprezentujący strukturę  bazy danych studenci (MS SQLServer).&lt;br /&gt;Tylko tabela student jest wypełnona danymi</wsdl:documentation>
+      <wsdl:input message="tns:bazaStudentowHttpGetIn" />
+      <wsdl:output message="tns:bazaStudentowHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ServiceHttpPost">
+    <wsdl:operation name="bazaStudentow">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zwraca obiekt DataSet1 reprezentujący strukturę  bazy danych studenci (MS SQLServer).&lt;br /&gt;Tylko tabela student jest wypełnona danymi</wsdl:documentation>
+      <wsdl:input message="tns:bazaStudentowHttpPostIn" />
+      <wsdl:output message="tns:bazaStudentowHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="bazaStudentow">
+      <soap:operation soapAction="http://wekrmpc15.am.gdynia.pl/www/serwisSQL//bazaStudentow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bazaStudentowAktualizacja">
+      <soap:operation soapAction="http://wekrmpc15.am.gdynia.pl/www/serwisSQL//bazaStudentowAktualizacja" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="bazaStudentow">
+      <soap12:operation soapAction="http://wekrmpc15.am.gdynia.pl/www/serwisSQL//bazaStudentow" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bazaStudentowAktualizacja">
+      <soap12:operation soapAction="http://wekrmpc15.am.gdynia.pl/www/serwisSQL//bazaStudentowAktualizacja" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceHttpGet" type="tns:ServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="bazaStudentow">
+      <http:operation location="/bazaStudentow" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceHttpPost" type="tns:ServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="bazaStudentow">
+      <http:operation location="/bazaStudentow" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://wekrmpc15.am.gdynia.pl/www/serwisSQL/service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://wekrmpc15.am.gdynia.pl/www/serwisSQL/service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceHttpGet" binding="tns:ServiceHttpGet">
+      <http:address location="http://wekrmpc15.am.gdynia.pl/www/serwisSQL/service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceHttpPost" binding="tns:ServiceHttpPost">
+      <http:address location="http://wekrmpc15.am.gdynia.pl/www/serwisSQL/service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -2,18 +2,21 @@ package com.company;
 
 import java.util.Iterator;
 
-public class Bag<Item> implements Iterable<Item>{
+public class Bag<Item> implements Iterable<Item>
+{
     private Node first;
-    private class Node{
+    private class Node
+    {
         Item item;
         Node next;
     }
 
-    public void addItem(Item a) {
-        Node popFirst = first;
-        first = new Node ();
+    public void add(Item a)
+    {
+        Node popFirst= first;
+        first = new Node();
         first.item=a;
-        first.next=popFirst;
+        first.next =popFirst;
     }
     public Iterator<Item> iterator()
     {
@@ -22,14 +25,19 @@ public class Bag<Item> implements Iterable<Item>{
 
     public class LIterator implements Iterator<Item>
     {
-        private Node current=first;
-        public boolean hasNext() {
+        private Node current = first;
+        public boolean hasNext()
+        {
             return current != null;
         }
-        public Item next() {
+        public Item next()
+        {
             Item item = current.item;
             current = current.next;
             return item;
         }
     }
 }
+
+
+

@@ -1,8 +1,8 @@
-public class SecondObject {
+public class Pasture {
     public int cow;
 
-    public SecondObject(int value){
+    public Pasture(int value){
         this.cow = value;
     }
-    public SecondObject(){ this.cow = 15; }
+    public Pasture(){ this.cow = 15; }
 }

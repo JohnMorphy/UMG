@@ -24,7 +24,7 @@ public class BazaOkno extends JFrame
     public BazaOkno()
     {
         Font czcionka = new Font("Serif", Font.BOLD, 20);
-        przycisk= new JButton("KONIEC");
+        przycisk = new JButton("KONIEC");
         przycisk.setBounds(szerokoscK-szerK, poczp+wysK/2, szerK*2, wysK);
         przycisk.setFont(czcionka);
         ImageIcon obrazek = new ImageIcon("C:\\inne\\kalkulator.jpg");

@@ -11,8 +11,8 @@ public class Klawiatura extends JFrame
     int poczD = 50;
     int szerokoscK = szerokosc/2;
     int wysokoscK = wysokosc/2;
-    int szerK = szerokoscK/5;
-    int wysK = wysokoscK/10;
+    int szerK = szerokosc/5;
+    int wysK = wysokosc/10;
 
     JButton przycisk1;
     JButton przycisk2;
@@ -31,7 +31,7 @@ public class Klawiatura extends JFrame
     {
         Font czcionka = new Font("Serif", Font.BOLD, 20);
         przycisk1 = new JButton("KONIEC");
-        przycisk1.setBounds(szerokoscK-szerK, poczp+wysK, szerK*2, wysK);
+        przycisk1.setBounds(szerokoscK-szerK, poczp+wysK+wysK, szerK*2, wysK);
         przycisk1.setFont(czcionka);
         ImageIcon obrazek = new ImageIcon("C:\\inne\\Kalkulator1.png");
         et = new JLabel(obrazek);

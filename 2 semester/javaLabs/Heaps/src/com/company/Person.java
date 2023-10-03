@@ -13,41 +13,41 @@ public class Person implements Comparable <Person>
     public int compareTo(Person o) {
         Collator c = Collator.getInstance(new Locale("pl", "PL"));
         int compareAge = -1*c.compare(this.birthdate,o.birthdate);
-        int compareName = c.compare(this.name, o.surename);
+        int compareName = c.compare(this.name, o.surname);
         if(compareAge==0) return compareName;
         return compareAge;
     }
 
-    String surename="Kowalski";
-    String name ="Jan";
-    String birthdate ="2000-10-12";
+    String surname = "Kowalski";
+    String name = "Jan";
+    String birthdate = "2000-10-12";
 
     static LocalDate presentDate = LocalDate.now();
     static int birthYear = presentDate.getYear();
     static int birthMonth = presentDate.getMonthValue();
-    public static ArrayList<Person> listaOsób = new ArrayList<Person>();
+    public static ArrayList<Person> personList = new ArrayList<Person>();
     @Override
     public String toString(){
-        return surename + " " + name + " " + birthdate + " wiek " + String.format("%5.2f", wiek(birthdate));
+        return surname + " " + name + " " + birthdate + " age " + String.format("%5.2f", age(birthdate));
     }
 
-    double wiek(String dataur)
+    double age(String birthDate)
     {
-        String[] data = dataur.split("-");
-        LocalDate urodzenie = LocalDate.of(Integer.parseInt(data[0]),
+        String[] data = birthDate.split("-");
+        LocalDate birth = LocalDate.of(Integer.parseInt(data[0]),
                 Integer.parseInt(data[1]), Integer.parseInt(data[2]));
-        Period per = Period.between(urodzenie, presentDate);
+        Period per = Period.between(birth, presentDate);
         return per.getYears()+per.getMonths()/12.0+per.getDays()/365.0;
     }
 
-    public Person() { listaOsób.add(this); }
+    public Person() { personList.add(this); }
 
-    public Person(String nazwisko, String name, String birthdate)
+    public Person(String surname, String name, String birthdate)
     {
-        this.surename =nazwisko;
+        this.surname =surname;
         this.name = name;
         this.birthdate = birthdate;
-        //listaOsób.add(this);
+        // personList.add(this);
     }
 
 

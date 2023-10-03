@@ -1,4 +1,4 @@
-package Backend;
+package Exceptions;
 
 public class NoImageException extends RuntimeException {
 

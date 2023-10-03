@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://wekrmpc15.am.gdynia.pl/www/serwis/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://wekrmpc15.am.gdynia.pl/www/serwis/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://wekrmpc15.am.gdynia.pl/www/serwis/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="seyHello">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="seyHelloResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="seyHelloResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dodawanie">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="x" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="y" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dodawanieResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dodawanieResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="listaDostawcow">
+        <s:complexType />
+      </s:element>
+      <s:element name="listaDostawcowResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listaDostawcowResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="studenci">
+        <s:complexType />
+      </s:element>
+      <s:element name="studenciResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="studenciResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="aktualizacja">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tabela">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="aktualizacjaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="aktualizacjaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="double" type="s:double" />
+      <s:element name="DataTable" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+            <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="seyHelloSoapIn">
+    <wsdl:part name="parameters" element="tns:seyHello" />
+  </wsdl:message>
+  <wsdl:message name="seyHelloSoapOut">
+    <wsdl:part name="parameters" element="tns:seyHelloResponse" />
+  </wsdl:message>
+  <wsdl:message name="dodawanieSoapIn">
+    <wsdl:part name="parameters" element="tns:dodawanie" />
+  </wsdl:message>
+  <wsdl:message name="dodawanieSoapOut">
+    <wsdl:part name="parameters" element="tns:dodawanieResponse" />
+  </wsdl:message>
+  <wsdl:message name="listaDostawcowSoapIn">
+    <wsdl:part name="parameters" element="tns:listaDostawcow" />
+  </wsdl:message>
+  <wsdl:message name="listaDostawcowSoapOut">
+    <wsdl:part name="parameters" element="tns:listaDostawcowResponse" />
+  </wsdl:message>
+  <wsdl:message name="studenciSoapIn">
+    <wsdl:part name="parameters" element="tns:studenci" />
+  </wsdl:message>
+  <wsdl:message name="studenciSoapOut">
+    <wsdl:part name="parameters" element="tns:studenciResponse" />
+  </wsdl:message>
+  <wsdl:message name="aktualizacjaSoapIn">
+    <wsdl:part name="parameters" element="tns:aktualizacja" />
+  </wsdl:message>
+  <wsdl:message name="aktualizacjaSoapOut">
+    <wsdl:part name="parameters" element="tns:aktualizacjaResponse" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldHttpGetIn" />
+  <wsdl:message name="HelloWorldHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="seyHelloHttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="seyHelloHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="dodawanieHttpGetIn">
+    <wsdl:part name="x" type="s:string" />
+    <wsdl:part name="y" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="dodawanieHttpGetOut">
+    <wsdl:part name="Body" element="tns:double" />
+  </wsdl:message>
+  <wsdl:message name="listaDostawcowHttpGetIn" />
+  <wsdl:message name="listaDostawcowHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="studenciHttpGetIn" />
+  <wsdl:message name="studenciHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldHttpPostIn" />
+  <wsdl:message name="HelloWorldHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="seyHelloHttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="seyHelloHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="dodawanieHttpPostIn">
+    <wsdl:part name="x" type="s:string" />
+    <wsdl:part name="y" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="dodawanieHttpPostOut">
+    <wsdl:part name="Body" element="tns:double" />
+  </wsdl:message>
+  <wsdl:message name="listaDostawcowHttpPostIn" />
+  <wsdl:message name="listaDostawcowHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="studenciHttpPostIn" />
+  <wsdl:message name="studenciHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="seyHello">
+      <wsdl:input message="tns:seyHelloSoapIn" />
+      <wsdl:output message="tns:seyHelloSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dodawanie">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Dodawanie liczb double.</wsdl:documentation>
+      <wsdl:input message="tns:dodawanieSoapIn" />
+      <wsdl:output message="tns:dodawanieSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="listaDostawcow">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista zainstalowanych dostawców fabrycznych.</wsdl:documentation>
+      <wsdl:input message="tns:listaDostawcowSoapIn" />
+      <wsdl:output message="tns:listaDostawcowSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="studenci">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zwraca obiekt tab_studentów klasy DataTable zawierający dane studentów z bazy PostgreSQL studenci.</wsdl:documentation>
+      <wsdl:input message="tns:studenciSoapIn" />
+      <wsdl:output message="tns:studenciSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="aktualizacja">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Pobiera obiekt typu DataTable zawierający dane studentów z bazy PostgreSQL studenci i dokonuje aktualizacji tabeli studenci na serwerze.&lt;br /&gt;Zwraca liczbę zaktualizowanych wierszy.</wsdl:documentation>
+      <wsdl:input message="tns:aktualizacjaSoapIn" />
+      <wsdl:output message="tns:aktualizacjaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ServiceHttpGet">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldHttpGetIn" />
+      <wsdl:output message="tns:HelloWorldHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="seyHello">
+      <wsdl:input message="tns:seyHelloHttpGetIn" />
+      <wsdl:output message="tns:seyHelloHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dodawanie">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Dodawanie liczb double.</wsdl:documentation>
+      <wsdl:input message="tns:dodawanieHttpGetIn" />
+      <wsdl:output message="tns:dodawanieHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="listaDostawcow">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista zainstalowanych dostawców fabrycznych.</wsdl:documentation>
+      <wsdl:input message="tns:listaDostawcowHttpGetIn" />
+      <wsdl:output message="tns:listaDostawcowHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="studenci">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zwraca obiekt tab_studentów klasy DataTable zawierający dane studentów z bazy PostgreSQL studenci.</wsdl:documentation>
+      <wsdl:input message="tns:studenciHttpGetIn" />
+      <wsdl:output message="tns:studenciHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ServiceHttpPost">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldHttpPostIn" />
+      <wsdl:output message="tns:HelloWorldHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="seyHello">
+      <wsdl:input message="tns:seyHelloHttpPostIn" />
+      <wsdl:output message="tns:seyHelloHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dodawanie">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Dodawanie liczb double.</wsdl:documentation>
+      <wsdl:input message="tns:dodawanieHttpPostIn" />
+      <wsdl:output message="tns:dodawanieHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="listaDostawcow">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista zainstalowanych dostawców fabrycznych.</wsdl:documentation>
+      <wsdl:input message="tns:listaDostawcowHttpPostIn" />
+      <wsdl:output message="tns:listaDostawcowHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="studenci">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zwraca obiekt tab_studentów klasy DataTable zawierający dane studentów z bazy PostgreSQL studenci.</wsdl:documentation>
+      <wsdl:input message="tns:studenciHttpPostIn" />
+      <wsdl:output message="tns:studenciHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://wekrmpc15.am.gdynia.pl/www/serwis/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="seyHello">
+      <soap:operation soapAction="http://wekrmpc15.am.gdynia.pl/www/serwis/seyHello" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dodawanie">
+      <soap:operation soapAction="http://wekrmpc15.am.gdynia.pl/www/serwis/dodawanie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listaDostawcow">
+      <soap:operation soapAction="http://wekrmpc15.am.gdynia.pl/www/serwis/listaDostawcow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="studenci">
+      <soap:operation soapAction="http://wekrmpc15.am.gdynia.pl/www/serwis/studenci" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="aktualizacja">
+      <soap:operation soapAction="http://wekrmpc15.am.gdynia.pl/www/serwis/aktualizacja" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://wekrmpc15.am.gdynia.pl/www/serwis/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="seyHello">
+      <soap12:operation soapAction="http://wekrmpc15.am.gdynia.pl/www/serwis/seyHello" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dodawanie">
+      <soap12:operation soapAction="http://wekrmpc15.am.gdynia.pl/www/serwis/dodawanie" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listaDostawcow">
+      <soap12:operation soapAction="http://wekrmpc15.am.gdynia.pl/www/serwis/listaDostawcow" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="studenci">
+      <soap12:operation soapAction="http://wekrmpc15.am.gdynia.pl/www/serwis/studenci" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="aktualizacja">
+      <soap12:operation soapAction="http://wekrmpc15.am.gdynia.pl/www/serwis/aktualizacja" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceHttpGet" type="tns:ServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="HelloWorld">
+      <http:operation location="/HelloWorld" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="seyHello">
+      <http:operation location="/seyHello" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dodawanie">
+      <http:operation location="/dodawanie" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listaDostawcow">
+      <http:operation location="/listaDostawcow" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="studenci">
+      <http:operation location="/studenci" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceHttpPost" type="tns:ServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="HelloWorld">
+      <http:operation location="/HelloWorld" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="seyHello">
+      <http:operation location="/seyHello" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dodawanie">
+      <http:operation location="/dodawanie" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listaDostawcow">
+      <http:operation location="/listaDostawcow" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="studenci">
+      <http:operation location="/studenci" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://wekrmpc15.am.gdynia.pl/www/serwis/service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://wekrmpc15.am.gdynia.pl/www/serwis/service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceHttpGet" binding="tns:ServiceHttpGet">
+      <http:address location="http://wekrmpc15.am.gdynia.pl/www/serwis/service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceHttpPost" binding="tns:ServiceHttpPost">
+      <http:address location="http://wekrmpc15.am.gdynia.pl/www/serwis/service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

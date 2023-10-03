@@ -12,7 +12,7 @@ public class ListsObject {
         while (j <= i) {
             if (j == i) {
                 Osoba buffer = new Osoba(newSurename, object.element.name, object.element.birthdate);
-                object.element = new Osoba (buffer.surename, buffer.name, buffer.birthdate);
+                object.element = new Osoba (buffer.surname, buffer.name, buffer.birthdate);
                 return true;
             } else if (object.next == null)
                 return false;

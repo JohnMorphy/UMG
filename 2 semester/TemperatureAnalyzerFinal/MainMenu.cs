@@ -29,7 +29,6 @@ namespace TemperatureAnalyzerFinal
 
             if(LoadFile.ShowDialog() != DialogResult.OK)
             return null;
-
             try
             {
                 filePath = LoadFile.FileName;
@@ -37,8 +36,7 @@ namespace TemperatureAnalyzerFinal
                 Data measurements = new Data();
                 measurements.Clear();
 
-                foreach (string line in System.IO.File.ReadLines(filePath))
-                {
+                foreach (string line in System.IO.File.ReadLines(filePath)) {
                     string[] convert = line.Split(';');
                     foreach (string text in convert)
                     {
@@ -62,8 +60,7 @@ namespace TemperatureAnalyzerFinal
                     return measurements;
                 }
             }
-            catch
-            {
+            catch {
                 MessageBox.Show("Can't load the file");
                 return null;
             }

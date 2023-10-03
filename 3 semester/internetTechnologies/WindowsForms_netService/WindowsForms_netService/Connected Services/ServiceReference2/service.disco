@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://wekrmpc15.am.gdynia.pl/www/serwisSQL/service.asmx?wsdl" docRef="http://wekrmpc15.am.gdynia.pl/www/serwisSQL/service.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://wekrmpc15.am.gdynia.pl/www/serwisSQL/service.asmx" xmlns:q1="http://wekrmpc15.am.gdynia.pl/www/serwisSQL//" binding="q1:ServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://wekrmpc15.am.gdynia.pl/www/serwisSQL/service.asmx" xmlns:q2="http://wekrmpc15.am.gdynia.pl/www/serwisSQL//" binding="q2:ServiceSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

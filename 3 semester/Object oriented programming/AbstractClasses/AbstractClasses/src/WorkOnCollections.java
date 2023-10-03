@@ -1,2 +1,11 @@
-package PACKAGE_NAME;public class WorkOnCollections {
+public interface WorkOnCollections <T>{
+
+    void add(T x);
+
+    boolean belongsTo(T x);
+
+    int giveNumber();
+
+    void print();
+
 }

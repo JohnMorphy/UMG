@@ -4,7 +4,125 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6fa03f0c-ab8b-4339-b285-a313e0d0ddfe" name="Changes" comment="" />
+    <list default="true" id="6fa03f0c-ab8b-4339-b285-a313e0d0ddfe" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../2 semester/javaLabs/Heaps/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../2 semester/javaLabs/Heaps/.idea/dictionaries/ThinkPad.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../2 semester/javaLabs/Heaps/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../2 semester/javaLabs/Heaps/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../2 semester/javaLabs/Heaps/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../2 semester/javaLabs/Heaps/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../2 semester/javaLabs/Heaps/Heaps.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../2 semester/javaLabs/Heaps/src/com/company/Heap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../2 semester/javaLabs/Heaps/src/com/company/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../2 semester/javaLabs/Queue/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../2 semester/javaLabs/Queue/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../2 semester/javaLabs/Queue/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../2 semester/javaLabs/Queue/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../2 semester/javaLabs/Queue/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../2 semester/javaLabs/Queue/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../2 semester/javaLabs/Queue/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../2 semester/javaLabs/Queue/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../2 semester/javaLabs/Queue/Queue.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../2 semester/javaLabs/Queue/src/com/company/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../2 semester/javaLabs/graph/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../2 semester/javaLabs/graph/src/com/company/Queue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/.vs/TemperatureAnalyzer/v17/.suo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/FILESAVE/save.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TESTS/average_0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TESTS/average_3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TESTS/empty.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TESTS/probes0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TESTS/probes1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TESTS/probes10.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TESTS/probes11.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TESTS/probes12.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TESTS/probes2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TESTS/probes3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TESTS/probes4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TESTS/probes5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TESTS/probes6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TESTS/probes7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TESTS/probes8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TESTS/probes9.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TemperatureAnalyzer.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TemperatureAnalyzer/App.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TemperatureAnalyzer/Data.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TemperatureAnalyzer/Display.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TemperatureAnalyzer/Display.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TemperatureAnalyzer/Display.resx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TemperatureAnalyzer/FailToLoad.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TemperatureAnalyzer/FailToLoad.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TemperatureAnalyzer/FailToLoad.resx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TemperatureAnalyzer/Instructions.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TemperatureAnalyzer/Instructions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TemperatureAnalyzer/Instructions.resx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TemperatureAnalyzer/MainMenu.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TemperatureAnalyzer/MainMenu.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TemperatureAnalyzer/MainMenu.resx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TemperatureAnalyzer/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TemperatureAnalyzer/Properties/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TemperatureAnalyzer/Properties/Resources.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TemperatureAnalyzer/Properties/Resources.resx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TemperatureAnalyzer/Properties/Settings.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TemperatureAnalyzer/Properties/Settings.settings" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TemperatureAnalyzer/TemperatureAnalyzer.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TemperatureAnalyzer/bin/Debug/TemperatureAnalyzer.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TemperatureAnalyzer/bin/Debug/TemperatureAnalyzer.exe.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TemperatureAnalyzer/bin/Debug/TemperatureAnalyzer.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TemperatureAnalyzer/obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TemperatureAnalyzer/obj/Debug/DesignTimeResolveAssemblyReferences.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TemperatureAnalyzer/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TemperatureAnalyzer/obj/Debug/TemperatureAnalyzer.Display.resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TemperatureAnalyzer/obj/Debug/TemperatureAnalyzer.FailToLoad.resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TemperatureAnalyzer/obj/Debug/TemperatureAnalyzer.Instructions.resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TemperatureAnalyzer/obj/Debug/TemperatureAnalyzer.MainMenu.resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TemperatureAnalyzer/obj/Debug/TemperatureAnalyzer.Properties.Resources.resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TemperatureAnalyzer/obj/Debug/TemperatureAnalyzer.csproj.AssemblyReference.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TemperatureAnalyzer/obj/Debug/TemperatureAnalyzer.csproj.CoreCompileInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TemperatureAnalyzer/obj/Debug/TemperatureAnalyzer.csproj.FileListAbsolute.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TemperatureAnalyzer/obj/Debug/TemperatureAnalyzer.csproj.GenerateResource.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TemperatureAnalyzer/obj/Debug/TemperatureAnalyzer.csproj.SuggestedBindingRedirects.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TemperatureAnalyzer/obj/Debug/TemperatureAnalyzer.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzer/TemperatureAnalyzer/obj/Debug/TemperatureAnalyzer.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzerFinal/.vs/TemperatureAnalyzerFinal/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzerFinal/.vs/TemperatureAnalyzerFinal/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzerFinal/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzerFinal/MainMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzerFinal/TESTS/witam.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzerFinal/TESTS/witam.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzerFinal/bin/Debug/TemperatureAnalyzerFinal.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzerFinal/bin/Debug/TemperatureAnalyzerFinal.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzerFinal/bin/Debug/TemperatureAnalyzerFinal.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzerFinal/bin/Debug/TemperatureAnalyzerFinal.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzerFinal/obj/Debug/TemperatureAnalyzerFinal.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzerFinal/obj/Debug/TemperatureAnalyzerFinal.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzerFinal/obj/Debug/TemperatureAnalyzerFinal.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2 semester/TemperatureAnalyzerFinal/obj/Debug/TemperatureAnalyzerFinal.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/assemblyBasics/[4] meanwhile/.vs/[4] meanwhile/v17/.suo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/assemblyBasics/[4] meanwhile/.vs/[4] meanwhile/v17/Browse.VC.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/assemblyBasics/[4] meanwhile/Debug/Main.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/assemblyBasics/[4] meanwhile/Debug/[4] meanwhile.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/assemblyBasics/[4] meanwhile/Debug/[4] meanwhile.exe.recipe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/assemblyBasics/[4] meanwhile/Debug/[4] meanwhile.ilk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/assemblyBasics/[4] meanwhile/Debug/[4] meanwhile.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/assemblyBasics/[4] meanwhile/Debug/[4] meanwhile.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/assemblyBasics/[4] meanwhile/Debug/[4] meanwhile.tlog/Masm.read.1u.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/assemblyBasics/[4] meanwhile/Debug/[4] meanwhile.tlog/Masm.write.1u.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/assemblyBasics/[4] meanwhile/Debug/[4] meanwhile.tlog/[4] meanwhile.lastbuildstate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/assemblyBasics/[4] meanwhile/Debug/[4] meanwhile.tlog/link.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/assemblyBasics/[4] meanwhile/Debug/[4] meanwhile.tlog/link.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/assemblyBasics/[4] meanwhile/Debug/[4] meanwhile.tlog/link.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/assemblyBasics/[4] meanwhile/Debug/[4] meanwhile.vcxproj.FileListAbsolute.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/assemblyBasics/[4] meanwhile/Main.asm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/assemblyBasics/[4] meanwhile/[4] meanwhile.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/assemblyBasics/[4] meanwhile/[4] meanwhile.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/assemblyBasics/[4] meanwhile/[4] meanwhile.vcxproj.filters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/assemblyBasics/[4] meanwhile/[4] meanwhile.vcxproj.user" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/javaLabs/Lab1/src/com/company/Heap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/javaLabs/Lab1/src/com/company/ListsObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2 semester/javaLabs/Lab1/src/com/company/ListsObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/javaLabs/Lab1/src/com/company/Osoba.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2 semester/javaLabs/Lab1/src/com/company/Osoba.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/javaLabs/Stack/out/production/Stack/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2 semester/javaLabs/Stack/out/production/Stack/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/javaLabs/Stack/out/production/Stack/com/company/ReversePN.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2 semester/javaLabs/Stack/out/production/Stack/com/company/ReversePN.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/javaLabs/Stack/out/production/Stack/com/company/Stack.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2 semester/javaLabs/Stack/out/production/Stack/com/company/Stack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/javaLabs/Stack/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2 semester/javaLabs/Stack/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/javaLabs/Stack/src/com/company/ReversePN.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2 semester/javaLabs/Stack/src/com/company/ReversePN.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/javaLabs/Stack/src/com/company/Stack.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2 semester/javaLabs/Stack/src/com/company/Stack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/javaLabs/graph/src/com/company/Bag.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2 semester/javaLabs/graph/src/com/company/Bag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2 semester/javaLabs/graph/src/com/company/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2 semester/javaLabs/graph/src/com/company/Graph.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

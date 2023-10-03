@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Task2and3 {
+public class Lab_04_z2_z3 {
 
     public static void invert(byte[] arr, int randomInt) {
         int spotRightOfRandom = (randomInt == arr.length-1) ? 0 : randomInt+1;
@@ -83,10 +83,10 @@ public class Task2and3 {
         System.out.println("\n --- TASK3 - invert (mutation) --- ");
 
         int randomInt1 = (int)(Math.random()*10);
-        Task2and3.invert(parent1, randomInt1);
+        Lab_04_z2_z3.invert(parent1, randomInt1);
 
         int randomInt2 = (int)(Math.random()*10);
-        Task2and3.invert(parent2, randomInt2);
+        Lab_04_z2_z3.invert(parent2, randomInt2);
 
         System.out.println("\nAfter inverting in points: " + randomInt1 + "(parent1), " + randomInt2 + "(parent2)\n");
         System.out.println("parent1:\n" + Arrays.toString(parent1));

@@ -1,6 +1,6 @@
 import java.time.LocalDate;
 
-public abstract class Abstract <Element> {
+public abstract class AbstractExample <Element> {
 
     LocalDate thisMoment = LocalDate.now();
     String letters = "ABCD";

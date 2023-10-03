@@ -1,0 +1,48 @@
+Sprawozdanie
+
+- opisujemy wszystkie metody w 
+formularzu testowym (dostępny na iliasie)
+
+- wykresy; należy umieścić 3 krzywe, co wykonujemy dla różnych populacji
+(wiecej w formularzu testowym):
+1 krzywa -> funkcja przystosowania wszystkich osobników
+2 krzywa -> najlepszy aktualny osobnik w aktualnym pokoleniu
+3 krzywa -> best global
+
+- uruchamiamy algorytm 30 krotnie; ilość ewaluacji: np 10000 
+(ilość ewaluacji będzie stała)
+(te same parametry -> te same populacje i ilość wykonanych iteracji)
+tworzymy plik 30 krotnie, i na podstawie tych 30 plików wykonujemy plik ze
+średnimi tych 30.
+
+
+- określamy ilość ewaluacji i zapisujemy jak ją określiliśmy. Może być to na
+przykład sprawdzenie czy przez ostatnie 3 populacje nastąpiła zmiana w
+najlepszej globalnej wartości.
+
+Wykonujemy to odpowiednio dla każdego rozmiaru populacji
+
+// uwagi do konkretnie mojego projektu (projekt 6)
+
+6 rozmiarów problemu
+procesory  	zadań
+2		10
+3  		10
+2  		20
+3		20
+4		50
+4		100
+
+rozmiar populacji: 100
+
+zakres długości zadań: 1 do 100 (int)
+rozwiązujemy ten sam problem (identyczna tablica, którą zapisujemy)
+
+
+
+Określ rozmiar problemu: liczba zadań oraz liczbę procesorów, tak aby jeden
+przebieg trwał 5 sekund -> 30 przebiegów 
+
+użyj PMX crossing
+
+

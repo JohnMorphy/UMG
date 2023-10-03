@@ -3,9 +3,9 @@ import java.util.Random;
 
 public abstract class Lab_06_Chromosome {
 
-    private double lowerBound;
-    private double upperBound;
-    private int resolution;
+    private final double lowerBound;
+    private final double upperBound;
+    private final int resolution;
     private int size;
     private int numOfGenomes;
 
@@ -57,6 +57,99 @@ public abstract class Lab_06_Chromosome {
         return chromosome;
     }
 
+    public void printPopulation(byte[][][] population) {
+        for (byte[][] chromosome:population) {
+            System.out.println();
+            printChromosome(chromosome);
+        }
+    }
+
+    public void printPopulationReal(byte [][][] population) {
+        for (byte[][] chromosome:population) {
+            System.out.println();
+            printChromosome(chromosome);
+            System.out.print(" ");
+            System.out.print(getFunctionResult(getRealValues(chromosome)));
+        }
+    }
+
+    public double getAverage(byte[][][] population) {
+        double average = 0;
+
+        for (byte[][] chromosome:population) {
+            average += getFunctionResult(getRealValues(chromosome));
+        }
+
+        average /= population.length;
+
+        return average;
+    }
+
+    public void printChromosome(byte[][] chromosome) {
+        for (byte[] genome:chromosome) {
+            for (byte value:genome){
+                System.out.print(value);
+            }
+            System.out.print(" ");
+        }
+    }
+
+    public void rouletteSelection(byte[][][] population) {
+
+
+
+        double [] functionValues = new double[population.length];
+
+        for (int i=0; i<functionValues.length; i++) {
+            functionValues[i] = getFunctionResult(getRealValues(population[i]));
+        }
+
+        double minFunctionValue = functionValues[0];
+
+        for (int i = 1; i < functionValues.length; i++) {
+            if (functionValues[i] < minFunctionValue) {
+                minFunctionValue = functionValues[i];
+            }
+        }
+
+        double [] distanceFromMin = new double[population.length];
+        for (int i=0; i<distanceFromMin.length; i++) {
+            distanceFromMin[i] = functionValues[i] - minFunctionValue;
+        }
+
+        double [] improvementPercentage = new double[population.length];
+
+        double modulatedMinFunctionValue = (minFunctionValue<0) ? -minFunctionValue : minFunctionValue;
+
+        for (int i=0; i<improvementPercentage.length; i++) {
+            improvementPercentage[i] = distanceFromMin[i]/modulatedMinFunctionValue;
+        }
+
+        double [] probability = new double[population.length];
+        double [] rangeOfSelection = new double[population.length];
+
+        probability[0] = improvementPercentage[0]+(1/population.length);
+        rangeOfSelection[0] = probability[0];
+
+        for (int i=1; i<probability.length; i++) {
+            probability[i] = improvementPercentage[i]+(1/population.length);
+            rangeOfSelection[i] = rangeOfSelection[i-1] + probability[i];
+        }
+
+        byte[][][] populationClone = population.clone();
+
+        for(int i=0; i<population.length; i++) {
+            double random = Math.random()*rangeOfSelection[population.length-1];
+            for (int j=0; j<rangeOfSelection.length; j++) {
+                if(random<rangeOfSelection[j]) {
+                    population[i] = populationClone[j];
+                    break;
+                }
+            }
+        }
+
+    }
+
     private byte[][] mutate(byte[][] chromosome, double probabilityOfMutation) {
 
         byte[][] mutated = chromosome.clone();
@@ -82,7 +175,7 @@ public abstract class Lab_06_Chromosome {
         return mutated;
     }
 
-    private long toDecimal(byte[] arr) {
+    static long toDecimal(byte[] arr) {
 
         long result = 0;
 

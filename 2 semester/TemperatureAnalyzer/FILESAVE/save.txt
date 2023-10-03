@@ -1,5 +1,0 @@
-Number of measurements: 5
-Average temperature:    3
-Maximal value:          5
-Minimal value:          1
-Variation:              2

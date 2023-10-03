@@ -13,14 +13,14 @@ public class Osoba implements Comparable <Osoba>
     public int compareTo(Osoba o) {
         Collator c = Collator.getInstance(new Locale("pl", "PL"));
         int compareAge = -1*c.compare(this.birthdate,o.birthdate);
-        int compareName = c.compare(this.name, o.surename);
+        int compareName = c.compare(this.name, o.surname);
         if(compareAge==0) return compareName;
         return compareAge;
     }
 
-    String surename="Kowalski";
-    String name ="Jan";
-    String birthdate ="2000-10-12";
+    String surname = "Kowalski";
+    String name = "Jan";
+    String birthdate = "2000-10-12";
 
     static LocalDate presentDate = LocalDate.now();
     static int birthYear = presentDate.getYear();
@@ -28,7 +28,7 @@ public class Osoba implements Comparable <Osoba>
     public static ArrayList<Osoba> listaOsób = new ArrayList<Osoba>();
     @Override
     public String toString(){
-        return surename + " " + name + " " + birthdate + " wiek " + String.format("%5.2f", wiek(birthdate));
+        return surname + " " + name + " " + birthdate + " wiek " + String.format("%5.2f", wiek(birthdate));
     }
 
     double wiek(String dataur)
@@ -44,7 +44,7 @@ public class Osoba implements Comparable <Osoba>
 
     public Osoba(String nazwisko, String name, String birthdate)
     {
-        this.surename =nazwisko;
+        this.surname =nazwisko;
         this.name = name;
         this.birthdate = birthdate;
         //listaOsób.add(this);

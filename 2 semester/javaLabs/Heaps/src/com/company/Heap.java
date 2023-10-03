@@ -3,7 +3,7 @@ package com.company;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Heaps<T extends Comparable<T>> {
+public class Heap<T extends Comparable<T>> {
 
     ArrayList<T> list = new ArrayList<>();
 

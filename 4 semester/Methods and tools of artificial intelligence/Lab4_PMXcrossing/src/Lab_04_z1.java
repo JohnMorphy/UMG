@@ -1,4 +1,4 @@
-public class Task1 implements Lab_04_Chromosome {
+public class Lab_04_z1 implements Lab_04_Chromosome {
 
     @Override
     public double getFunctionResult(double[] values) {
@@ -7,7 +7,7 @@ public class Task1 implements Lab_04_Chromosome {
 
     public static void main(String[] args) {
 
-        Task1 task = new Task1();
+        Lab_04_z1 task = new Lab_04_z1();
 
         System.out.println(" --- TASK 1 - mutation --- ");
 

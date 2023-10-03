@@ -1,0 +1,2 @@
+Witam, udało się otworzyć plik, bo tym razem plik o wskazanej nazwie istnieje.
+Właśnie czytasz jego treść

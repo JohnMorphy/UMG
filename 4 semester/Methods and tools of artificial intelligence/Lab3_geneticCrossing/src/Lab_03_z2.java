@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Task2 implements Lab_03_Chromosome {
+public class Lab_03_z2 implements Lab_03_Chromosome {
 
     @Override
     public double getFunctionResult(double[] values) {
@@ -27,7 +27,7 @@ public class Task2 implements Lab_03_Chromosome {
 
         System.out.println();
 
-        Task1 task = new Task1();
+        Lab_03_z1 task = new Lab_03_z1();
         System.out.println("function result: " + task.getFunctionResult(parent1));
         System.out.println();
 

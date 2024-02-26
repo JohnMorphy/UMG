@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Category list</title>
+<xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" type="text/css" href="../style.css"/>
+<script type="text/javascript" src="../nav.js"></script>
+</head>
+<body>
+
+<nav th:insert="~{fragments/nav.html :: nav}"></nav>
+
+<div>
+ <h2>Category List</h2>
+ <a href="/new_category">Create New Category</a>
+ <br/><br/>
+ <table>
+ <thead>
+ <tr>
+ <th>Category Id</th>
+ <th>Description</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr th:each="category : ${lc}">
+ <td th:text="${category.idc}">Category ID</td>
+ <td th:text="${category.description}">Description</td>
+ <td>
+ <a th:href="@{'/edit_category/' + ${category.idc}}">Edit</a>
+ &nbsp;&nbsp;&nbsp;
+ <a th:href="@{'/delete_category/' + ${category.idc}}">Delete</a>
+ </td>
+ </tr>
+ </tbody>
+ </table>
+</div>
+
+</body>
+</html>

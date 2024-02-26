@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <div th:insert="~{partials/head}"></div>
+
+  <body>
+    <div th:insert="~{partials/navi}"></div>
+
+    <div id="content">
+      <div class="form-view">
+        <h1>Set User Data</h1>
+
+        <form th:action="@{/user_data_update}" method="post">
+          <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+
+          <input type="hidden" th:name="id" th:value="${userData.id}" />
+
+
+          <div class="input-row">
+            <input
+              type="text"
+              name="user_firstname"
+              id="user_firstname"
+              th:value="${userData.user_firstname}"
+              placeholder="First name"
+              required
+            />
+            <input
+              type="text"
+              name="user_lastname"
+              id="user_lastname"
+              th:value="${userData.user_lastname}"
+              placeholder="Last name"
+              required
+            />
+          </div>
+
+          <div class="input-row">
+            <input
+              type="number"
+              name="user_phonenumber"
+              id="user_phonenumber"
+              th:value="${userData.user_phonenumber}"
+              placeholder="Phone number in format 123456789"
+              required
+            />
+          </div>
+
+          <div class="input-row">
+            <button type="submit">Update User Data</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div th:insert="~{partials/footer}"></div>
+  </body>
+</html>

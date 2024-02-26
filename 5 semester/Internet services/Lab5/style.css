@@ -1,0 +1,22 @@
+textarea {
+    resize: none;
+}
+
+table {
+    border: 1;
+    border-style: solid;
+}
+
+form {
+    margin-top: 15px;
+    width: fit-content;
+    padding: 20px;
+    border-width: 3px;
+    border-style: solid;
+}
+
+.removeForm {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Add Category</title>
+<xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" type="text/css" href="../style.css"/>
+<script type="text/javascript" src="../nav.js"></script>
+</head>
+<body>
+
+<nav th:insert="~{fragments/nav.html :: nav}"></nav>
+
+<div>
+ <h2>Create new category</h2>
+ <br />
+ <form action="#" th:action="@{/save_category}" th:object="${category}" method="post">
+ <table>
+ <tr>
+ <td>Description</td>
+ <td><input type="text" th:field="*{description}" required/></td>
+ </tr>
+ </table>
+ <button type="submit">Save</button>
+ </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:insert="~{partials/head}"></th:block>
+</head>
+<body>
+    <th:block th:insert="~{partials/navi}"></th:block>
+    <div id="content">
+
+        <div class="personal-card">
+            <h2>User Information</h2>
+            <p><strong>First Name:</strong> <span th:text="${userData.user_firstname}"></span></p>
+            <p><strong>Last Name:</strong> <span th:text="${userData.user_lastname}"></span></p>
+            <p><strong>Email:</strong> <span th:text="${user.email}"></span></p>
+            <p><strong>Phone Number:</strong> <span th:text="${userData.user_phonenumber}"></span></p>
+
+            <form th:action="@{/user_data_edit}" method="get">
+                <button type="submit">Edit Personal Data</button>
+            </form>
+        </div>
+
+        <table class="offer-table">
+            <th:block th:if="${not #lists.isEmpty(offers)}">
+                <th:block th:each="offer : ${offers}">
+					<tr class="offer-row">
+                        <td th:onclick="|window.location.href='/RealEstateApp/offer_getById/${offer.id}'|">
+                            <th:block th:if="${offer.photos.size() > 0}">
+						        <img class="offer-photo" th:src="@{'/offerPhotos/' + ${offer.photos.get(0).filepath}}" alt="Offer Photo" width="100" />
+						    </th:block>
+						    <th:block th:unless="${offer.photos.size() > 0}">
+						        <img class="offer-photo" th:src="@{/images/defaultImage.jpg}" alt="Default Photo" width="100" />
+						    </th:block>
+                        </td>
+                        <td th:onclick="|window.location.href='/RealEstateApp/offer_getById/${offer.id}'|">
+                            <div>
+                                <h2 th:text="${offer.title}"></h2>
+                                <p th:text="${#strings.abbreviate(offer.description, 200)}"></p>
+                            </div>
+                        </td>
+                        <td class="list-offer-info" th:onclick="|window.location.href='/offer_getById/${offer.id}'|">
+                            <div>
+                                <p><strong>Address:</strong> <span th:text="${offer.city + ', ' + offer.street + ' ' + offer.address}"></span></p>
+                                <p><strong>Postal Code:</strong> <span th:text="${offer.offer_postalCode}"></span></p>
+                                <p><strong>Price:</strong> $<span th:text="${offer.offer_price}"></span></p>
+                                <p><strong>Area:</strong> <span th:text="${offer.area_in_meters + ' m2'}"></span></p>
+                            </div>
+                        </td>
+                        
+						<td class="table-button" th:onclick="|window.location.href='/RealEstateApp/delete_offer/${offer.id}'|">
+                            <span>Delete</span>
+                        </td>
+                
+                    </tr>
+                </th:block>
+            </th:block>
+            <th:block th:if="${#lists.isEmpty(offers)}">
+                <h1>You havent created any offers yet</h1>
+            </th:block>
+        </table>
+
+
+    </div>
+    <th:block th:insert="~{partials/footer}"></th:block>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formularz pracownika</title>
+</head>
+<body>
+
+    <h2>Formularz pracownika - dane dodatkowe</h2>
+    <form action="fp.php" method="post">
+        
+        <label for="doswiadczenie">Doswiadczenie</label>
+        <br>
+        <textarea id="doswiadczenie" name="doswiadczenie" rows="3" cols="20" required><?php echo isset($_SESSION['pracownik']) ? $_SESSION['pracownik']->getDoswiadczenie() : ''; ?></textarea>
+        <br>
+
+        <label for="zainteresowania">Zainteresowania</label>
+        <br>
+        <textarea id="zainteresowania" name="zainteresowania" rows="3" cols="20" required><?php echo isset($_SESSION['pracownik']) ? $_SESSION['pracownik']->getZainteresowania() : ''; ?></textarea>
+        <br>
+
+        <input type="hidden" id="page" name="page" value="3">
+
+        <input type="submit" value="Dalej">
+    </form> 
+
+    <br>
+    
+    <form action="fp.php" method="post">
+        <input type="hidden" name="page" value="1">
+        <input type="submit" value="Powrót">
+    </form>
+
+
+    <?php
+        include_once("footer.php");
+    ?>
+
+</body>
+</html>

@@ -1,5 +1,1 @@
-# Gdynia Maritime University
-## First semester
----
-notable programs
----
+# my Gdynia Maritime University repository

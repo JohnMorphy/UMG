@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<nav>
+    <div class="nav_div">
+        <a class="nav_link" th:href="@{/offers}">
+            <img class='icon' th:src="@{/images/favicon.ico}" alt="Logo" width="32" height="32">
+            YourNewHome
+        </a>
+        <div class="nav-links">
+            <a class="nav_link" th:href="@{/offers}">View offers</a>
+            <a class="nav_link" th:href="@{/offer_create}">Add offer</a>
+            
+            <div sec:authorize="isAuthenticated()">
+                <a class="nav_link" th:href="@{/view_personal}">
+                    <img class='icon' th:src="@{/images/userIcon.png}" alt="Logo" width="32" height="32">
+                    My data
+                </a>
+            </div>
+            
+            <div sec:authorize="isAuthenticated()">
+                <a class="nav_link" th:href="@{/logout}">Logout</a>
+			</div>
+			
+            <div sec:authorize="hasRole('admin')">
+               <a class="nav_link" th:href="@{/admin_dashboard_users}">
+                   <img class='icon' th:src="@{/images/gearIcon.png}" alt="Logo" width="32" height="32">
+                    Admin Dashboard
+               </a>
+            </div>
+
+            <div sec:authorize="!isAuthenticated()">
+                <a class="nav_link" th:href="@{/login}">Login</a>
+            </div>
+            
+        </div>
+    
+    	<div class="hamburger-menu" onclick="toggleMenu()">
+            <div class="bar bar1"></div>
+            <div class="bar bar2"></div>
+            <div class="bar bar3"></div>
+        </div>
+    
+    </div>
+</nav>
+</html>

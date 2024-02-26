@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+body {font-family:"Helvetica Neue",Arial,"Noto Sans",sans-serif; 
+margin:0;background:rgb(255, 255, 200);}
+
+h2 {padding: 0 1em;}
+
+nav {background-color: tomato; padding:1em 0;}
+
+nav div.logo a {font-size:150%; color:white; padding:1em 1em 0 1em;}
+
+nav a {text-decoration:none; display:inline; padding:2em 1em; color:white;}
+nav a:hover {color:#cacaca;}
+
+div#content  {text-align:left; margin: 0 1em; padding:1em; }
+div#content  table {text-align:left; }
+
+div#content form table {width:100%;}
+
+div#content form table td:nth-child(3n+1) {width:20%;}
+div#content form table td:nth-child(3n+2) {width:30%;}
+div#content form table td:nth-child(3n) {width:50%; padding:0 0.5em; color:red;}
+
+/*div#content  form fieldset {border-radius:5px; border-color:border-color;margin:0 10px;}*/
+/*div#content  form label {display:block; width:95%; text-align:left; margin:auto;}*/
+/*div#content  form input {display:block; width:96%; height:1.8em; margin:auto; 
+   border-radius:5px; border-color:#cacaca;}*/
+div#content  form input {height:1.8em; border-radius:5px; border-color:#cacaca; width:100%}   
+div#content  form input[type="submit"] {height:2em;margin-top:1px;} 
+div#content form input:hover {border-color:#000;}

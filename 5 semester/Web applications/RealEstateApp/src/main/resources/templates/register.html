@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:insert="~{partials/head}"></th:block>
+</head>
+<body>
+    <th:block th:insert="~{partials/navi}"></th:block>
+
+    <div id="content">
+        <div class="form-view">
+            <h1>Register</h1>
+            
+			<div th:if="${error}">
+                <p class="mb-4" th:text="${error}"></p>
+            </div>
+
+            <form method="post" th:action="@{/register}" class="form" th:object="${user}">
+
+				<div class="login-row">
+				    <label for="username">Name</label>
+				    <br>
+				    <input id="username" class="input" type="text" th:field="*{username}" required autofocus autocomplete="username" />
+				</div>
+
+				<div class="login-row">
+				    <label for="email">Email</label>
+				    <br>
+				    <input id="email" class="input" type="email" th:field="*{email}" required autocomplete="email" />
+				</div>
+
+				<div class="login-row">
+				    <label for="password">Password</label>
+				    <br>
+				    <input id="password" class="input" type="password" th:field="*{password}" required autocomplete="new-password" />
+				</div>
+
+                <div class="login-row">
+                    <button type="submit" class="ms-4">Register</button>
+                    <a class="form-link" th:href="@{/login}">Already registered?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

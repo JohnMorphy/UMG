@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:h="http://xmlns.jcp.org/jsf/html"
+ xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+ xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:body>
+
+<ui:composition template="template.xhtml">
+	
+	<ui:define name="htmlTitle">
+	Users list
+	</ui:define>
+	<ui:define name="pageHeader">
+	Users list
+	</ui:define>
+	
+	<ui:define name="header">
+	    Add your header here or delete to use the default
+	</ui:define>
+	<ui:define name="content">
+	    <h:dataTable var="user"
+		 summary="List of all users"
+		 value="#{userManager.users}"
+		 rules="all"
+		 cellpadding="5">
+		 
+		 <h:column>
+		 <f:facet name="header">
+		 <h:outputText value="User" />
+		 </f:facet>
+		 <h:outputText value="#{user.first_name} #{user.last_name}" />
+		 </h:column>
+		 <h:column>
+		 <f:facet name="header">
+		 <h:outputText value="Year of study" />
+		 </f:facet>
+		 <h:outputText value="#{user.year_of_study}" />
+		 </h:column>
+		 <h:column>
+		 <f:facet name="header">
+		 <h:outputText value="Email" />
+		 </f:facet>
+		 <h:outputText value="#{user.email}"/>
+		 </h:column>
+		 <h:column>
+		 <f:facet name="header">
+		 <h:outputText value="Personal ID" />
+		 </f:facet>
+		 <h:outputText value="#{user.personal_id}" />
+		 </h:column>
+		 <h:column>
+		 <f:facet name="header">
+		 <h:outputText value="Country" />
+		 </f:facet>
+		 <h:outputText value="#{user.country}" />
+		 </h:column>
+		</h:dataTable>
+	</ui:define>
+	<ui:define name="footer">
+	    Add your footer here or delete to use the default
+	</ui:define>
+</ui:composition>
+
+</h:body>
+
+</html>

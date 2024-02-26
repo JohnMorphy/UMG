@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<ui:composition template="template.xhtml">
+	<ui:define name="htmlTitle">
+	Edit users
+	</ui:define>
+	<ui:define name="pageHeader">
+	Edit users
+	</ui:define>
+	<ui:define name="header">
+	    Add your header here or delete to use the default
+	</ui:define>
+	<ui:define name="content">
+	    <h:form id="deleteUserForm">
+			<ui:repeat value="#{userManager.users}" var="user">
+			<p>
+				<h:commandLink id="deleteUser" action="#{userManager.deleteUser(user.id)}"
+							value="#{user.last_name} #{user.first_name}" immediate="true">
+				</h:commandLink>
+			</p>
+			</ui:repeat>
+		</h:form>
+	</ui:define>
+	<ui:define name="footer">
+	    Add your footer here or delete to use the default
+	</ui:define>
+</ui:composition>
+</html>

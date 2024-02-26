@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formularz pracownika</title>
+</head>
+<body>
+
+    <?php
+        include_once("pracownik.php");
+    ?>
+
+    <h2>Dane podstawowe</h2>
+    <form action="fp.php" method="post">
+        <label for="nazwisko">Nazwisko</label><br>
+        <input type="text" id="nazwisko" name="nazwisko" value="<?php echo isset($_SESSION['pracownik']) ? $_SESSION['pracownik']->getNazwisko() : ''; ?>" required><br>
+        <label for="imie">Imię</label><br>
+        <input type="text" id="imie" name="imie" value="<?php echo isset($_SESSION['pracownik']) ? $_SESSION['pracownik']->getImie() : ''; ?>" required><br>
+        <label for="wiek">Wiek</label><br>
+        <input type="number" id="wiek" name="wiek" value="<?php echo isset($_SESSION['pracownik']) ? $_SESSION['pracownik']->getWiek() : ''; ?>" required><br><br>
+        
+        <input type="hidden" id="page" name="page" value="2">
+
+        <input type="submit" value="Dalej">
+        
+    </form> 
+
+    
+
+    <?php
+        include_once("footer.php");
+    ?>
+
+</body>
+</html>

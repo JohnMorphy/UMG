@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Publisher list</title>
+<xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" type="text/css" href="../style.css"/>
+<script type="text/javascript" src="../nav.js"></script>
+</head>
+<body>
+
+<nav th:insert="~{fragments/nav.html :: nav}"></nav>
+
+<div>
+ <h2>Publisher List</h2>
+ <a href="/new_publisher">Create New Publisher</a>
+ <br/><br/>
+ <table>
+ <thead>
+ <tr>
+ <th>Publisher Id</th>
+ <th>Publisher Name</th>
+ <th>Publisher Address</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr th:each="publisher : ${lp}">
+ <td th:text="${publisher.idp}">Publisher ID</td>
+ <td th:text="${publisher.name}">Name</td>
+ <td th:text="${publisher.address}">Address</td>
+ <td>
+ <a th:href="@{'/edit_publisher/' + ${publisher.idp}}">Edit</a>
+ &nbsp;&nbsp;&nbsp;
+ <a th:href="@{'/delete_publisher/' + ${publisher.idp}}">Delete</a>
+ </td>
+ </tr>
+ </tbody>
+ </table>
+</div>
+
+</body>
+</html>

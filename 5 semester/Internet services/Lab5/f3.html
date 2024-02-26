@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formularz pracownika</title>
+</head>
+<body>
+
+    <h2>Etap końcowy</h2>
+        
+    <form action="fp.php" method="post">
+        <p>Powróć</p>
+        <input type="hidden" id="page" name="page" value="2">
+        <input type="submit" value="Powrót">
+    </form>
+
+    <form action="fp.php" method="post">
+        <p>Zatwierdź</p>
+        <input type="hidden" id="page" name="page" value="4">
+        <input type="submit" value="Zatwierdź">
+    </form>
+
+
+    <?php
+        include_once("footer.php");
+    ?>
+
+</body>
+</html>

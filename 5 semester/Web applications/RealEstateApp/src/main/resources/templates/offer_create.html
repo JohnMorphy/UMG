@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:insert="~{partials/head}"></th:block>
+</head>
+<body>
+    <th:block th:insert="~{partials/navi}"></th:block>
+        
+    <div id="content">
+        <div class="form-view">
+            <h1>Create New Offer</h1>
+            
+            <form th:action="@{/offer_create}" method="post">
+                <input type="hidden" name="_csrf" th:value="${_csrf.token}" />
+
+ 		        <input type="hidden" th:name="user_id" th:value="${offerDTO.user_id}" />
+
+
+                <div class="input-row">
+                    <div>
+                        <label for="title">Title:</label>
+                        <br>
+                        <input type="text" name="title" id="title" placeholder="Enter title" required>
+                    </div>
+                </div>
+
+                <div class="input-row">
+                    <div>
+                        <label for="description">Description:</label>
+                        <br>
+                        <textarea name="description" id="description" rows="4" placeholder="Enter description" required></textarea>
+                    </div>
+                </div>
+
+                <div class="input-row">
+                    <div>
+                        <label for="offer_price">Price:</label>
+                        <br>
+                        <input type="number" name="offer_price" id="offer_price" placeholder="Enter price" required>
+                    </div>
+                    <div>
+                        <label for="area_in_meters">Area (m2):</label>
+                        <br>
+                        <input type="number" name="area_in_meters" id="area_in_meters" placeholder="Enter area" required>
+                    </div>
+                </div>
+
+                <div class="input-row">
+                    <div>
+                        <label for="city">City:</label>
+                        <br>
+                        <input type="text" name="city" id="city" placeholder="Enter city" required>
+                    </div>
+                    <div>
+                        <label for="offer_postalCode">Postal Code:</label>
+                        <br>
+                        <input type="text" name="offer_postalCode" id="offer_postalCode" placeholder="Enter postal code" required>
+                    </div>
+                </div>
+
+                <div class="input-row">
+                    <div>
+                        <label for="street">Street:</label>
+                        <br>
+                        <input type="text" name="street" id="street" placeholder="Enter street 101/21" required>
+                    </div>
+                    <div>
+                        <label for="address">Address:</label>
+                        <br>
+                        <input type="text" name="address" id="address" placeholder="Enter address" required>
+                    </div>
+                </div>
+
+                <div class="input-row">
+                    <div>
+                        <label for="expiration_date">Expiration Date:</label>
+                        <br>
+                        <input type="text" name="expiration_date" id="expiration_date" th:value="${offerDTO.expiration_date}" readonly>
+                    </div>
+                </div>
+
+                <div class="input-row">
+                    <div>
+                        <label for="photos">Upload Photos:</label>
+                        <br>
+                        <input type="file" name="photos" id="photos" accept="image/*" multiple>
+                    </div>
+                </div>
+
+                <div>
+                    <button type="submit">Create Offer</button>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+
+    <th:block th:insert="~{partials/footer}"></th:block>
+</body>
+</html>

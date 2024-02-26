@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:insert="~{partials/head}"></th:block>
+</head>
+<body>
+    <th:block th:insert="~{partials/navi}"></th:block>
+
+    <div id="content">
+        <div class="form-view">
+            <h1>Login</h1>
+
+            <div th:if="${param.status}">
+                <p class="mb-4" th:text="${param.status}"></p>
+            </div>
+            
+            <div th:if="${message}">
+                <p class="mb-4" th:text="${message}"></p>
+            </div>
+            
+            <div th:if="${param.error}">
+                <div class="login-error">
+                    <p>Login failed. Please check your credentials.</p>
+                </div>
+            </div>
+
+            <form method="post" th:action="@{/login}" class="form" th:object="${user}">
+                <div class="login-row">
+                    <label for="email">Email</label>
+                    <br>
+                    <input id="email" class="input" type="email" th:field="*{email}" required autofocus autocomplete="username" />
+                </div>
+
+                <div class="login-row">
+                    <label for="password">Password</label>
+                    <br>
+                    <input id="password" class="input" type="password" th:field="*{password}" required autocomplete="current-password" />
+                </div>
+
+                <div class="login-row">
+                    <button type="submit" class="ms-3">Log in</button>
+                    <a class="form-link" th:href="@{/register}">Create new account</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

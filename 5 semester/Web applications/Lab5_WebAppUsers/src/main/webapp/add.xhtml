@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<ui:composition template="template.xhtml">
+	<ui:define name="htmlTitle">
+	Add new user
+	</ui:define>
+	<ui:define name="header">
+	    Add your header here or delete to use the default
+	</ui:define>
+	<ui:define name="content">
+		<h:form id="addUserForm">
+			<h:panelGrid id="userGrid" columns="3">
+				<h:outputLabel for="userFirstNameInput" value="First name: " />
+				<h:inputText id="userFirstNameInput"
+					value="#{userManager.user.first_name}" required="true"
+					label="First name" />
+				<h:message for="userFirstNameInput" />
+				<h:outputLabel for="userLastNameInput" value="Last name: " />
+				<h:inputText id="userLastNameInput"
+					value="#{userManager.user.last_name}" />
+				<h:message for="userLastNameInput" />
+				<h:outputLabel for="userYearOfStudyInput" value="Year of study: " />
+				<h:inputText id="userYearOfStudyInput"
+					value="#{userManager.user.year_of_study}" label="Year of study">
+					<f:validateLongRange minimum="1" maximum="5" />
+				</h:inputText>
+				<h:message for="userYearOfStudyInput" />
+				<h:outputLabel for="userEmailInput" value="Email: " />
+				<h:inputText id="userEmailInput" value="#{userManager.user.email}" >
+					<f:validateLength minimum="6" />
+					<f:validateRegex pattern="^[-\w\.]+@([-\w]+\.)+[a-z]+$"/>
+				</h:inputText>				
+				<h:message for="userEmailInput" />
+				
+				<h:outputLabel for="userPersonal_idInput" value="Personal ID: " />
+				<h:inputText id="userPersonalIdInput" value="#{userManager.user.personal_id}" required="true" label="Personal ID">
+					<f:convertNumber converterId="jakarta.faces.Long" pattern="00000000000"/>
+				</h:inputText>
+					
+				<h:message styleClass="error-message" for="userPersonalIdInput" />
+				<h:outputLabel for="userCountryInput" value="Country: " />
+				<h:inputText id="userCountryInput" value="#{userManager.user.country}" />
+				<h:message for="userCountryInput" />
+				<f:facet name="footer">
+					<tr>
+						<td colspan="2"><h:commandButton id="createUserButton"
+								action="#{userManager.insertUser(userManager.user)}"
+								value="Create User" /> <h:commandButton id="cancelButton"
+								immediate="true" action="index" value="Cancel" /></td>
+						<td><h:message for="createUserButton" /></td>
+					</tr>
+				</f:facet>
+			</h:panelGrid>
+		</h:form>
+	</ui:define>
+	<ui:define name="footer">
+	    Add your footer here or delete to use the default
+	</ui:define>
+</ui:composition>
+</html>

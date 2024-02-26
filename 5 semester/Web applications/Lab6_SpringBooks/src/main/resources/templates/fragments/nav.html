@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<xmlns:th="http://www.thymeleaf.org">
+
+</head>
+<body>
+
+	<nav th:fragment="nav">
+		<ul>
+		  <li><a href="/books_list">Books list</a></li>
+		  <li><a href="/category_list">Category list</a></li>
+		  <li><a href="/publisher_list">Publisher list</a></li>
+		  <li class="pushToRight">
+			  
+			  <a sec:authorize="!isAuthenticated()" th:href="@{/login}">Login</a>
+			  
+			  <form id="logoutForm" th:action="@{/logout}" method="post">
+                    <input type="submit" value="Logout" style="display: none;"/>
+              </form>
+              
+              <a sec:authorize="isAuthenticated()" onclick="document.getElementById('logoutForm').submit();">Logout</a>
+
+		  </li>
+		  <li class="pushToRight"><p id="username">Guest</p></li>
+		</ul>			
+	</nav>
+	
+</body>
+</html>

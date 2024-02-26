@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  	<th:block th:insert="~{partials/head}"></th:bloc>
+</head>
+<body>
+    <th:block th:insert="~{partials/navi}"></th:block>
+    <div id="content">
+        <div>
+            <h1 th:text="${offer.title}"></h1>
+        </div>
+
+        <div class="offer-container">
+            <div class="row">
+
+                <div class="gallery">
+                    <div class="scroll-container">
+                        <th:block th:if="${offer.photos.size() > 0}">
+                            <th:block th:each="photo : ${offer.photos}">
+						        <img class="offer-photo" th:src="@{'/offerPhotos/' + ${photo.filepath}}" alt="Offer Photo" width="300" />
+                            </th:block>
+                        </th:block>
+                        <th:block th:unless="${offer.photos.size() > 0}">
+						        <img class="offer-photo" th:src="@{/images/defaultImage.jpg}" alt="Default Photo" width="300" />
+						</th:block>
+                    </div>
+                </div>
+
+                <div class="personal-card">
+                    <h2>Seller Information</h2>
+                    <p><strong>First Name:</strong> <span th:text="${userData.user_firstname}"></span></p>
+                    <p><strong>Last Name:</strong> <span th:text="${userData.user_lastname}"></span></p>
+                    <p><strong>Email:</strong> <span th:text="${userData.user.email}"></span></p>
+                    <p><strong>Phone Number:</strong> <span th:text="${userData.user_phonenumber}"></span></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="offer-details">
+                    <h2 th:text="${offer.title}"></h2>
+                    <p th:text="${offer.description}"></p>
+
+                    <div class="offer-stats">
+                        <h2>Offer Details</h2>
+                        <p><strong>Price:</strong> $<span th:text="${offer.offer_price}"></span></p>
+                        <p><strong>Area (sqm):</strong> <span th:text="${offer.area_in_meters}"></span></p>
+						<p><strong>Location:</strong> <span th:text="${offer.city + ', ' + offer.street + ' ' + offer.address + ', ' + offer.offer_postalCode}"></span></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <th:block th:insert="~{partials/footer}"></th:block>
+</body>
+</html>

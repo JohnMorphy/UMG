@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Adapters</string>
+
+    <string-array name="voivodeship">
+        <item>dolnośląskie</item>
+        <item>kujawsko-pomorskie</item>
+        <item>lubelskie</item>
+        <item>lubuskie</item>
+        <item>łódzkie</item>
+        <item>małopolskie</item>
+        <item>mazowieckie</item>
+        <item>opolskie</item>
+        <item>podkarpackie</item>
+        <item>podlaskie</item>
+        <item>pomorskie</item>
+        <item>śląskie</item>
+        <item>świętokrzyskie</item>
+        <item>warmińsko-mazurskie</item>
+        <item>wielkopolskie</item>
+        <item>zachodniopomorskie</item>
+    </string-array>
+
+
+</resources>

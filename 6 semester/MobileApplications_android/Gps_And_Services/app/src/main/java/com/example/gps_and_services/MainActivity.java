@@ -122,8 +122,7 @@ public class MainActivity extends AppCompatActivity {
                     randomNumberDisplay.setText("Random number: " + value);
                     sumDisplay.setText("sum = " + sum);
 
-
-                    Location location =
+                    gpsService.updateLocation();
                     gpsData.setText("");
 
                     if(isHandlerRunning) {

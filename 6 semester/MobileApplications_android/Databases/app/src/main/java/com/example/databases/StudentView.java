@@ -63,10 +63,7 @@ public class StudentView extends BaseAdapter {
         editButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.v("StudentView", "Edit button clicked for: " + student.name);
-                Intent intent = new Intent(parentView.getContext(), EditStudentActivity.class);
-                intent.putExtra("studentId", student.id);
-                parentView.getContext().startActivity(intent);
+                //TODO
             }
         });
 

@@ -18,7 +18,6 @@
     android:orientation="vertical"
     tools:context=".MainActivity" >
 
-    <!-- Toolbar -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -28,74 +27,16 @@
         app:title="Student management app"
         app:titleTextColor="@android:color/white"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="183dp"
-            app:srcCompat="@drawable/empty" />
-
-        <TextView
-            android:id="@+id/studentDescription"
-            android:layout_width="73dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:paddingLeft="30px"
-            android:paddingTop="30px"
-            android:text="Student data\n-"
-            android:textAlignment="viewStart" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/removeButton"
-            android:layout_width="208dp"
-            android:layout_height="wrap_content"
-            android:onClick="clearDatabase"
-            android:text="clear database" />
-
-        <Button
-            android:id="@+id/seedDatabase"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="seedDatabase"
-            android:text="seed database" />
-    </LinearLayout>
-
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <RadioButton
-            android:id="@+id/sortByName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sort by name" />
-
-        <RadioButton
-            android:id="@+id/sortByAverage"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sort by grade average" />
-    </RadioGroup>
-
-    <ListView
-        android:id="@+id/listView"
+    <FrameLayout
+        android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
 </LinearLayout>
 
+
     <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"

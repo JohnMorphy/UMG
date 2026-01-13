@@ -1,0 +1,54 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+
+import pandas as pd
+import numpy as np
+from mlxtend.frequent_patterns import apriori, association_rules
+from mlxtend.preprocessing import TransactionEncoder
+
+
+# SPRAWDZ SCIEZKE!! Uwaga ten skrypt przetwarza dane  GroceryStoreDataSet
+df = pd.read_csv('GroceryStoreDataSet.csv', header=None, names = ['products'])
+# wyświetlimy informacje o wczytanych danych
+print('liczba rekordów we wczytamym pliku wynosi:',len(df))
+print(df.head())
+print(df.shape)
+
+# teraz srowadzmy dane do postaci macierzowej
+data = list(df["products"].apply(lambda x:x.split(",") ))
+print(data)
+
+# teraz tę postać macierzową sprowadzmy do pełnej reprezentacji produktów kupowanych (zobacz co otrzymaliśmy)
+a = TransactionEncoder()
+a_data = a.fit(data).transform(data)
+df = pd.DataFrame(a_data, columns=a.columns_)
+df = df.replace(False, 0)
+print(df)
+
+
+frequent_itemsets = apriori(df, min_support=0.001, use_colnames=True)
+
+
+rules = association_rules(frequent_itemsets, metric="support"  , min_threshold=0.2)
+rules = rules.sort_values(['confidence', 'lift'], ascending =[False, False])
+# sprawdzmy co tu się teraz da się wyświetlić
+print(rules.head())
+print(rules)
+print(rules[ (rules['confidence'] >= 0.8) ])
+
+# tu tylko sprawdzmy nagłówki
+
+print(rules.columns)
+# Ale możesz też poszerzyć kryteria skoro znasz nagłówki struktury danych z regułami
+rules = rules[ (rules['support'] >= 0.2) & (rules['confidence'] >= 0.6) & (rules['lift'] >= 1.3) ]
+print(rules)
+
+
+# teraz typy danych w tabeli z regułami
+print(rules.dtypes)
+
+# to teraz wyswietlmy tylko wybrane kolumny z
+print(rules[['antecedents', 'consequents', 'support', 'confidence', 'lift']])
+
+# A teraz pytanie: Jak ze struktury rules przejść na zapis JEŻELI A to B DLA Support = ... oraz Confidence = .....

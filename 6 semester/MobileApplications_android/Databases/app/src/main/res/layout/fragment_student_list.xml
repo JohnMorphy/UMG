@@ -1,14 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".StudentListFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-</FrameLayout>
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="206dp"
+            android:layout_height="183dp"
+            android:maxWidth="100dp"
+            app:srcCompat="@drawable/empty" />
+
+        <TextView
+            android:id="@+id/studentDescription"
+            android:layout_width="73dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="30px"
+            android:paddingTop="30px"
+            android:text="Student data\n-"
+            android:textAlignment="viewStart" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/clearDatabase"
+            android:layout_width="208dp"
+            android:layout_height="wrap_content"
+            android:onClick="clearDatabase"
+            android:text="clear database" />
+
+        <Button
+            android:id="@+id/seedDatabase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="seedDatabase"
+            android:text="seed database" />
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/sortByName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sort by name" />
+
+        <RadioButton
+            android:id="@+id/sortByAverage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sort by grade average" />
+    </RadioGroup>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

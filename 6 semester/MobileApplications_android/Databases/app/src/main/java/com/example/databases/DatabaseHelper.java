@@ -30,7 +30,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 + "SREDNIA REAL);");
     }
 
-    public boolean addRecord(SQLiteDatabase db, int zd, String nazwisko, String imie, String dataur, String wydzial, double srednia) {
+    public boolean addRecord(int zd, String nazwisko, String imie, String dataur, String wydzial, double srednia) {
+        SQLiteDatabase db = this.getReadableDatabase();
         ContentValues value = new ContentValues();
         value.put("ZDJECIE", zd);
         value.put("NAZWISKO", nazwisko);
@@ -47,14 +48,39 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
-    public boolean removeRecord(SQLiteDatabase db, Integer id) {
-        int x = (int) db.delete(TABLE_NAME, "_id = ?", new String[] {id.toString()});
+    public boolean updateRecord(int id, String surname, String name, String birthDate, String department, double average) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("NAZWISKO", surname);
+        values.put("IMIE", name);
+        values.put("DATAUR", birthDate);
+        values.put("WYDZIAL", department);
+        values.put("SREDNIA", average);
 
-        if (x == -1) {
-            return false;
-        } else {
-            return true;
-        }
+        int rowsAffected = db.update(TABLE_NAME, values, "_id = ?", new String[]{String.valueOf(id)});
+        db.close();
+
+        return rowsAffected > 0;
+    }
+
+    public boolean removeRecord(int id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        int result = db.delete(TABLE_NAME, "_id = ?", new String[]{String.valueOf(id)});
+        db.close();
+        return result != -1;
+    }
+
+    public Cursor selectStudents() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        return db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
+    }
+
+    public boolean isDatabaseEmpty() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
+        boolean isEmpty = cursor.getCount() == 0;
+        cursor.close();
+        return isEmpty;
     }
 
     @Override

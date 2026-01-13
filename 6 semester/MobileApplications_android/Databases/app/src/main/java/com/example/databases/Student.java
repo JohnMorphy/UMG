@@ -1,5 +1,6 @@
 package com.example.databases;
 
+import java.io.Serializable;
 import java.text.Collator;
 import java.time.LocalDate;
 import java.time.Period;
@@ -8,7 +9,7 @@ import java.util.Comparator;
 import java.util.Locale;
 
 //@RequiresApi(api = Build.VERSION_CODES.O)
-public class Student implements Comparable<Student>{
+public class Student implements Comparable<Student>, Serializable {
     int image;
     int id;
     String surname;
